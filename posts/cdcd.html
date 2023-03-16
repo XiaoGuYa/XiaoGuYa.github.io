@@ -4,19 +4,14 @@
         <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-    给Butterfly加上顶部加载条
-    
-        - 
-    
-</title>
+<title>给Butterfly加上顶部加载条 | XiaoGu</title>
 <noscript>开启Javascript是必要的</noscript>
 <link rel="icon" type="image/x-icon" href="/img/avatar.webp">
 <link rel="apple-touch-icon" href="/img/avatar.webp">
 <meta name="apple-mobile-web-app-title" content="XiaoGu">
 <link rel="bookmark" href="/img/avatar.webp">
 <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/avatar.webp">
-<meta name="description" content="记录生活">
+<meta name="description" content="效果已在本站实装，切换页面顶部有加载进度条参考文章为Hexo博客添加顶部加载条&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3">
 <meta name="theme-color" content="#1C1C1F">
 <link rel="stylesheet" href="/css/var.css">
 <link rel="stylesheet" href="/css/main.css">
@@ -153,9 +148,9 @@
                         </li>
                     
                         <li>
-                            <a class="site-page child" href="/stars/">
-                                <i class="fas fa-star"></i>
-                                <span> 藏宝</span>
+                            <a class="site-page child" href="/links/">
+                                <i class="fas fa-link"></i>
+                                <span> 友链</span>
                             </a>
                         </li>
                     
@@ -295,9 +290,9 @@
                         </li>
                     
                         <li>
-                            <a class="site-page child" href="/stars/">
-                                <i class="fas fa-star"></i>
-                                <span> 藏宝</span>
+                            <a class="site-page child" href="/links/">
+                                <i class="fas fa-link"></i>
+                                <span> 友链</span>
                             </a>
                         </li>
                     
@@ -515,7 +510,9 @@
     </div>
     <div class="post-copyright__notice"><span class="post-copyright-info">本文是测试文章，采用 <a
                 href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a> 协议，完整转载请注明来自 <a
-                href="/"></a></span></div>
+                href="/"></a>
+            </span>
+        </div>
 </div>
     <nav class="pagination-post" id="pagination">
     
@@ -598,7 +595,7 @@
             <i class="fas fa-bars"></i>
             <span>文章目录</span>
         </div>
-        <div class="toc-content">
+        <div class="toc-content" id="toc-content">
             <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E5%85%A5css"><span class="toc-text">引入css</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E5%85%A5js"><span class="toc-text">引入js</span></a></li></ol>
         </div>
     </div>
@@ -841,12 +838,20 @@
 <script src="/lib/waterfall.min.js"></script>
 
 
+    
+<link rel="stylesheet" href="/lib/swiper.min.css">
+
+    
+<script src="/lib/swiper.min.js"></script>
+
+
 
 <script>
   let pjaxSelectors = [
     'title',
     '#body-wrap',
     '.site-config',
+    'meta[name="description"]'
   ]
   
   const pjax = new Pjax({

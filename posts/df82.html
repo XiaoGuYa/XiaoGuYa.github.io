@@ -4,19 +4,14 @@
         <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-    好用的网站合集
-    
-        - 
-    
-</title>
+<title>好用的网站合集 | XiaoGu</title>
 <noscript>开启Javascript是必要的</noscript>
 <link rel="icon" type="image/x-icon" href="/img/avatar.webp">
 <link rel="apple-touch-icon" href="/img/avatar.webp">
 <meta name="apple-mobile-web-app-title" content="XiaoGu">
 <link rel="bookmark" href="/img/avatar.webp">
 <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/avatar.webp">
-<meta name="description" content="记录生活">
+<meta name="description" content="网上有非常非常多的优质网站，它们可以为我们提供许多便利。个人认为好的网站应该被大家所熟知，所以写此文章来记录一些好用的网站。有些就能需要特殊手段才可以访问，在这就不细讲了。欢迎在下方留言你收藏的好网站">
 <meta name="theme-color" content="#1C1C1F">
 <link rel="stylesheet" href="/css/var.css">
 <link rel="stylesheet" href="/css/main.css">
@@ -153,9 +148,9 @@
                         </li>
                     
                         <li>
-                            <a class="site-page child" href="/stars/">
-                                <i class="fas fa-star"></i>
-                                <span> 藏宝</span>
+                            <a class="site-page child" href="/links/">
+                                <i class="fas fa-link"></i>
+                                <span> 友链</span>
                             </a>
                         </li>
                     
@@ -295,9 +290,9 @@
                         </li>
                     
                         <li>
-                            <a class="site-page child" href="/stars/">
-                                <i class="fas fa-star"></i>
-                                <span> 藏宝</span>
+                            <a class="site-page child" href="/links/">
+                                <i class="fas fa-link"></i>
+                                <span> 友链</span>
                             </a>
                         </li>
                     
@@ -634,7 +629,9 @@
     </div>
     <div class="post-copyright__notice"><span class="post-copyright-info">本文是测试文章，采用 <a
                 href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a> 协议，完整转载请注明来自 <a
-                href="/"></a></span></div>
+                href="/"></a>
+            </span>
+        </div>
 </div>
     <nav class="pagination-post" id="pagination">
     
@@ -722,7 +719,7 @@
             <i class="fas fa-bars"></i>
             <span>文章目录</span>
         </div>
-        <div class="toc-content">
+        <div class="toc-content" id="toc-content">
             <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E5%B8%B8%E9%80%9A%E7%94%A8"><span class="toc-text">日常通用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A3%81%E7%BA%B8%E5%A4%B4%E5%83%8F"><span class="toc-text">壁纸头像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E8%88%AA%E7%BD%91%E7%AB%99"><span class="toc-text">导航网站</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="toc-text">实用工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E6%8F%90%E5%8D%87"><span class="toc-text">学习提升</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%9E%E5%85%AC%E6%95%88%E7%8E%87"><span class="toc-text">办公效率</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%B1%E9%9F%B3%E5%A8%B1%E4%B9%90"><span class="toc-text">影音娱乐</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91"><span class="toc-text">编程开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%B0%E6%88%90%E9%A1%B9%E7%9B%AE"><span class="toc-text">现成项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E6%96%87%E6%A1%A3"><span class="toc-text">编程文档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#API%E6%8E%A5%E5%8F%A3"><span class="toc-text">API接口</span></a></li></ol></li></ol>
         </div>
     </div>
@@ -965,12 +962,20 @@
 <script src="/lib/waterfall.min.js"></script>
 
 
+    
+<link rel="stylesheet" href="/lib/swiper.min.css">
+
+    
+<script src="/lib/swiper.min.js"></script>
+
+
 
 <script>
   let pjaxSelectors = [
     'title',
     '#body-wrap',
     '.site-config',
+    'meta[name="description"]'
   ]
   
   const pjax = new Pjax({

@@ -4,12 +4,7 @@
         <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-    即刻短文
-    
-        - 
-    
-</title>
+<title>即刻短文 | XiaoGu</title>
 <noscript>开启Javascript是必要的</noscript>
 <link rel="icon" type="image/x-icon" href="/img/avatar.webp">
 <link rel="apple-touch-icon" href="/img/avatar.webp">
@@ -153,9 +148,9 @@
                         </li>
                     
                         <li>
-                            <a class="site-page child" href="/stars/">
-                                <i class="fas fa-star"></i>
-                                <span> 藏宝</span>
+                            <a class="site-page child" href="/links/">
+                                <i class="fas fa-link"></i>
+                                <span> 友链</span>
                             </a>
                         </li>
                     
@@ -295,9 +290,9 @@
                         </li>
                     
                         <li>
-                            <a class="site-page child" href="/stars/">
-                                <i class="fas fa-star"></i>
-                                <span> 藏宝</span>
+                            <a class="site-page child" href="/links/">
+                                <i class="fas fa-link"></i>
+                                <span> 友链</span>
                             </a>
                         </li>
                     
@@ -368,6 +363,42 @@
 <div id="bber">
     <section class="timeline page-1">
         <ul class="list" id="waterfall">
+            
+                
+                <li class="item">
+                    <div class="bber-content">
+    <p class="datacont">终于把这个弄出来了，看来没有文档指引，还是不懂啊</p>
+        
+</div>
+                    <hr>
+                    <div class="bber-bottom">
+    <div class="bber-info">
+        <div class="bber-info-time">
+            <i class="fas fa-calendar-days"></i>
+            <time class="datetime" datetime="2023-03-16T00:00:00+00:00"></time>
+        </div>
+            
+    </div>
+</div>
+                </li>
+            
+                
+                <li class="item">
+                    <div class="bber-content">
+    <p class="datacont">今天是emo的一天</p>
+        
+</div>
+                    <hr>
+                    <div class="bber-bottom">
+    <div class="bber-info">
+        <div class="bber-info-time">
+            <i class="fas fa-calendar-days"></i>
+            <time class="datetime" datetime="2023-03-13T08:00:00+00:00"></time>
+        </div>
+            
+    </div>
+</div>
+                </li>
             
         </ul>
     </section>
@@ -530,12 +561,20 @@
 <script src="/lib/waterfall.min.js"></script>
 
 
+    
+<link rel="stylesheet" href="/lib/swiper.min.css">
+
+    
+<script src="/lib/swiper.min.js"></script>
+
+
 
 <script>
   let pjaxSelectors = [
     'title',
     '#body-wrap',
     '.site-config',
+    'meta[name="description"]'
   ]
   
   const pjax = new Pjax({

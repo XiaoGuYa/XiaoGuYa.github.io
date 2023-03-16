@@ -4,12 +4,7 @@
         <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-    全部分类
-    
-        - 
-    
-</title>
+<title>XiaoGu</title>
 <noscript>开启Javascript是必要的</noscript>
 <link rel="icon" type="image/x-icon" href="/img/avatar.webp">
 <link rel="apple-touch-icon" href="/img/avatar.webp">
@@ -43,7 +38,7 @@
 
 <div class="site-config">
     <script>
-        var GOBALPAGE = "page"
+        var GOBALPAGE = "temp"
     </script> 
 </div>
 
@@ -153,9 +148,9 @@
                         </li>
                     
                         <li>
-                            <a class="site-page child" href="/stars/">
-                                <i class="fas fa-star"></i>
-                                <span> 藏宝</span>
+                            <a class="site-page child" href="/links/">
+                                <i class="fas fa-link"></i>
+                                <span> 友链</span>
                             </a>
                         </li>
                     
@@ -235,7 +230,7 @@
         </div>
         <div id="page-name-mask">
             <div id="page-name">
-                <a id="page-name-text" onclick="acrylic.toTop()">全部分类</a>
+                <a id="page-name-text" onclick="acrylic.toTop()">XiaoGu</a>
             </div>
         </div>
         <div id="menus">
@@ -295,9 +290,9 @@
                         </li>
                     
                         <li>
-                            <a class="site-page child" href="/stars/">
-                                <i class="fas fa-star"></i>
-                                <span> 藏宝</span>
+                            <a class="site-page child" href="/links/">
+                                <i class="fas fa-link"></i>
+                                <span> 友链</span>
                             </a>
                         </li>
                     
@@ -356,7 +351,7 @@
                 <main class="layout hide-aside" id="content-inner">
     <div id="page">
         
-                <h1 class="page-title" style="display: inline;">全部分类</h1>
+                <h1 class="page-title" style="display: inline;"></h1>
 <div class="category-lists">
     <div class="tag-cloud-list is-center">
         
@@ -517,12 +512,20 @@
 <script src="/lib/waterfall.min.js"></script>
 
 
+    
+<link rel="stylesheet" href="/lib/swiper.min.css">
+
+    
+<script src="/lib/swiper.min.js"></script>
+
+
 
 <script>
   let pjaxSelectors = [
     'title',
     '#body-wrap',
     '.site-config',
+    'meta[name="description"]'
   ]
   
   const pjax = new Pjax({

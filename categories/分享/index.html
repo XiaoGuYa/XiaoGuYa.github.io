@@ -4,12 +4,7 @@
         <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-    XiaoGu
-    
-        - 
-    
-</title>
+<title>分类 分享 | XiaoGu</title>
 <noscript>开启Javascript是必要的</noscript>
 <link rel="icon" type="image/x-icon" href="/img/avatar.webp">
 <link rel="apple-touch-icon" href="/img/avatar.webp">
@@ -153,9 +148,9 @@
                         </li>
                     
                         <li>
-                            <a class="site-page child" href="/stars/">
-                                <i class="fas fa-star"></i>
-                                <span> 藏宝</span>
+                            <a class="site-page child" href="/links/">
+                                <i class="fas fa-link"></i>
+                                <span> 友链</span>
                             </a>
                         </li>
                     
@@ -295,9 +290,9 @@
                         </li>
                     
                         <li>
-                            <a class="site-page child" href="/stars/">
-                                <i class="fas fa-star"></i>
-                                <span> 藏宝</span>
+                            <a class="site-page child" href="/links/">
+                                <i class="fas fa-link"></i>
+                                <span> 友链</span>
                             </a>
                         </li>
                     
@@ -525,14 +520,14 @@
         
         <ul class="card-archive-list">
     
-        <li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/" data-pjax-state=""><span
+        <li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2022/')" data-pjax-state=""><span
             class="card-archive-list-date">2022</span>
             <div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span
                     class="card-archive-list-count-unit">篇</span></div>
             </a>
         </li>
     
-        <li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/" data-pjax-state=""><span
+        <li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2023/')" data-pjax-state=""><span
             class="card-archive-list-date">2023</span>
             <div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span
                     class="card-archive-list-count-unit">篇</span></div>
@@ -555,7 +550,7 @@
                     <i class="item-icon fas fa-stopwatch"></i>
                     <div class="item-name">建站天数 :</div>
                 </div>
-                <div class="item-count">89 天
+                <div class="item-count">94 天
                 </div>
             </div>
             
@@ -705,12 +700,20 @@
 <script src="/lib/waterfall.min.js"></script>
 
 
+    
+<link rel="stylesheet" href="/lib/swiper.min.css">
+
+    
+<script src="/lib/swiper.min.js"></script>
+
+
 
 <script>
   let pjaxSelectors = [
     'title',
     '#body-wrap',
     '.site-config',
+    'meta[name="description"]'
   ]
   
   const pjax = new Pjax({

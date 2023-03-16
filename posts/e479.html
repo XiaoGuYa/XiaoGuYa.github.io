@@ -4,19 +4,14 @@
         <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-    第一篇文章
-    
-        - 
-    
-</title>
+<title>第一篇文章 | XiaoGu</title>
 <noscript>开启Javascript是必要的</noscript>
 <link rel="icon" type="image/x-icon" href="/img/avatar.webp">
 <link rel="apple-touch-icon" href="/img/avatar.webp">
 <meta name="apple-mobile-web-app-title" content="XiaoGu">
 <link rel="bookmark" href="/img/avatar.webp">
 <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/avatar.webp">
-<meta name="description" content="记录生活">
+<meta name="description" content="本博的说明1.目前记录自己学习之路2.酷安机佬分享搞机3.记录日常4.欢迎交换友链5.更多写博原因不写博客不知道自己多牛B，写了博客就知道自己多lowB博客不是你想写，想写就能写，这玩意">
 <meta name="theme-color" content="#1C1C1F">
 <link rel="stylesheet" href="/css/var.css">
 <link rel="stylesheet" href="/css/main.css">
@@ -153,9 +148,9 @@
                         </li>
                     
                         <li>
-                            <a class="site-page child" href="/stars/">
-                                <i class="fas fa-star"></i>
-                                <span> 藏宝</span>
+                            <a class="site-page child" href="/links/">
+                                <i class="fas fa-link"></i>
+                                <span> 友链</span>
                             </a>
                         </li>
                     
@@ -295,9 +290,9 @@
                         </li>
                     
                         <li>
-                            <a class="site-page child" href="/stars/">
-                                <i class="fas fa-star"></i>
-                                <span> 藏宝</span>
+                            <a class="site-page child" href="/links/">
+                                <i class="fas fa-link"></i>
+                                <span> 友链</span>
                             </a>
                         </li>
                     
@@ -529,7 +524,9 @@
     </div>
     <div class="post-copyright__notice"><span class="post-copyright-info">本文是测试文章，采用 <a
                 href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a> 协议，完整转载请注明来自 <a
-                href="/"></a></span></div>
+                href="/"></a>
+            </span>
+        </div>
 </div>
     <nav class="pagination-post" id="pagination">
     
@@ -612,7 +609,7 @@
             <i class="fas fa-bars"></i>
             <span>文章目录</span>
         </div>
-        <div class="toc-content">
+        <div class="toc-content" id="toc-content">
             <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E5%8D%9A%E7%9A%84%E8%AF%B4%E6%98%8E"><span class="toc-text">本博的说明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%99%E5%8D%9A%E5%8E%9F%E5%9B%A0"><span class="toc-text">写博原因</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CodeSheep%E7%9A%84tip"><span class="toc-text">CodeSheep的tip</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8hexo%E6%90%AD%E5%8D%9A%E5%AE%A2"><span class="toc-text">为什么用hexo搭博客</span></a></li></ol>
         </div>
     </div>
@@ -855,12 +852,20 @@
 <script src="/lib/waterfall.min.js"></script>
 
 
+    
+<link rel="stylesheet" href="/lib/swiper.min.css">
+
+    
+<script src="/lib/swiper.min.js"></script>
+
+
 
 <script>
   let pjaxSelectors = [
     'title',
     '#body-wrap',
     '.site-config',
+    'meta[name="description"]'
   ]
   
   const pjax = new Pjax({
