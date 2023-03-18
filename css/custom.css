@@ -21,7 +21,7 @@
 }
 
 .meta-secondline > span{
-    opacity: .6;
+    opacity: 1;
     transition: .3s;
     margin-right: 1.1rem;
 }

@@ -36,12 +36,7 @@
 
 
 
-<div class="site-config">
-    <script>
-        var GOBALPAGE = "temp"
-    </script> 
-</div>
-
+<script>var GOBALCONFIG = {"root":"/","runtime":"2022-12-12 00:00:00","lazyload":{"enable":true,"error":"/img/acrylic.png"},"lightbox":true,"randomlinks":false,"lang":{"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"recent":"最近","yesterday":"昨天","berforeyesterday":"前天","daybefore":"天前","runtime":"天"},"sayhello":{"morning":"早上好","noon":"中午好","afternoon":"下午好","night":"晚上好","goodnight":"晚安","iam":"!  我是"}}};</script><script id="site-config">var PAGECONFIG = {"is_home":false,"is_post":false,"is_page":false,"comment":false,"page":false,"toc":false};</script>
     <meta name="generator" content="Hexo 6.3.0"></head>
     <body id="body">
         
@@ -63,6 +58,9 @@
             document.getElementById('body').classList = 'pace-done'
         }
     }
+    window.addEventListener('load',()=> { preloader.endLoading() })
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
 </script>
         
         <div id="console" style="zoom: 1;" class="">
@@ -167,48 +165,8 @@
             </div>
             <div class="card-tag-cloud">
                 
-                    <a href="/tags/%E8%87%AA%E8%BF%B0/" style="font-size: 1em; color: #d3d3d3">自述
-                        <sup>1</sup>
-                    </a>
-                
-                    <a href="/tags/%E9%97%B2%E8%B0%88/" style="font-size: 1em; color: #d3d3d3">闲谈
-                        <sup>1</sup>
-                    </a>
-                
-                    <a href="/tags/Butterfly/" style="font-size: 1em; color: #d3d3d3">Butterfly
-                        <sup>3</sup>
-                    </a>
-                
-                    <a href="/tags/%E5%8A%A0%E8%BD%BD%E6%9D%A1/" style="font-size: 1em; color: #d3d3d3">加载条
-                        <sup>1</sup>
-                    </a>
-                
-                    <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 1em; color: #d3d3d3">网站
-                        <sup>1</sup>
-                    </a>
-                
-                    <a href="/tags/%E5%A4%B4%E5%83%8F/" style="font-size: 1em; color: #d3d3d3">头像
-                        <sup>1</sup>
-                    </a>
-                
-                    <a href="/tags/%E5%A3%81%E7%BA%B8/" style="font-size: 1em; color: #d3d3d3">壁纸
-                        <sup>1</sup>
-                    </a>
-                
-                    <a href="/tags/vscode/" style="font-size: 1em; color: #d3d3d3">vscode
-                        <sup>1</sup>
-                    </a>
-                
-                    <a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 1em; color: #d3d3d3">插件
-                        <sup>1</sup>
-                    </a>
-                
-                    <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 1em; color: #d3d3d3">前端
-                        <sup>2</sup>
-                    </a>
-                
                     <a href="/tags/Hexo/" style="font-size: 1em; color: #d3d3d3">Hexo
-                        <sup>2</sup>
+                        <sup>1</sup>
                     </a>
                 
             </div>
@@ -230,7 +188,7 @@
         </div>
         <div id="page-name-mask">
             <div id="page-name">
-                <a id="page-name-text" onclick="acrylic.toTop()">XiaoGu</a>
+                <a id="page-name-text" onclick="acrylic.toTop()">分类</a>
             </div>
         </div>
         <div id="menus">
@@ -346,30 +304,18 @@
         </div>
     </div>
 </nav>
-        
+  
 </header>
                 <main class="layout hide-aside" id="content-inner">
     <div id="page">
         
-                <h1 class="page-title" style="display: inline;"></h1>
+                <h1 class="page-title" style="display: inline;">分类</h1>
 <div class="category-lists">
     <div class="tag-cloud-list is-center">
-        
-            <a href="/categories/%E5%88%86%E4%BA%AB/">
-                <span class="tags-punctuation">#</span> 
-                分享
-                <span class="tagsPageCount">2</span>
-            </a>
         
             <a href="/categories/hexo/">
                 <span class="tags-punctuation">#</span> 
                 hexo
-                <span class="tagsPageCount">3</span>
-            </a>
-        
-            <a href="/categories/%E8%BD%AF%E4%BB%B6/">
-                <span class="tags-punctuation">#</span> 
-                软件
                 <span class="tagsPageCount">1</span>
             </a>
         
@@ -481,9 +427,10 @@
                 </footer>
             </div>
            
-        <script type="text/javascript" src="/js/utils.js"></script>
-<script type="text/javascript" src="/js/main.js"></script>
-
+        <div>
+    <script type="text/javascript" src="/js/utils.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    
 
 <script src="/lib/pjax.min.js"></script>
 
@@ -491,25 +438,14 @@
     
 <script src="/lib/lazyload.min.js"></script>
 
-    <script>
-    window.lazyLoadInstance = new LazyLoad({
-        elements_selector: 'img',
-        threshold: 0,
-        data_src: 'lazy-src',
-        callback_error: (img) => {
-            img.setAttribute("src", "/img/acrylic.png");
-        }
-    })
-</script>
 
 
 <script src="/lib/snackbar.min.js"></script>
 
 
+    
 <script src="/lib/view-image.min.js"></script>
 
-
-<script src="/lib/waterfall.min.js"></script>
 
 
     
@@ -520,12 +456,17 @@
 
 
 
-<script>
+<div id="js-pjax">
+     
+</div>
+
+    <script>
   let pjaxSelectors = [
     'title',
     '#body-wrap',
-    '.site-config',
-    'meta[name="description"]'
+    '#site-config',
+    'meta[name="description"]',
+    '#js-pjax'
   ]
   
   const pjax = new Pjax({
@@ -535,26 +476,6 @@
     analytics: false,
     scrollRestoration: false
   })
-  
-  window.addEventListener('DOMContentLoaded', () => {
-          lazyLoadInstance.update()
-      
-          preloader.endLoading() 
-       
-  })
-  document.addEventListener('pjax:send', () => {
-     
-      preloader.initLoading() 
-    
-  })
-  document.addEventListener('pjax:complete', () => { 
-          preloader.endLoading()
-              preloader.removePaceDone()
-       
-      
-          lazyLoadInstance.update()
-       
-  })
 
   document.addEventListener('pjax:error', (e) => {
     if (e.request.status === 404) {
@@ -562,7 +483,8 @@
     }
   })
 </script>
-
+    
+</div>
     </body>
 </html>
-<script>const posts=["posts/e479.html","posts/7fd3.html","posts/16107.html","posts/2bfa.html","posts/df82.html","posts/cdcd.html"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>
+<script>const posts=["posts/16107.html"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>

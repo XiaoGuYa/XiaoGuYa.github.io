@@ -36,12 +36,7 @@
 
 
 
-<div class="site-config">
-    <script>
-        var GOBALPAGE = "home"
-    </script> 
-</div>
-
+<script>var GOBALCONFIG = {"root":"/","runtime":"2022-12-12 00:00:00","lazyload":{"enable":true,"error":"/img/acrylic.png"},"lightbox":true,"randomlinks":false,"lang":{"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"recent":"最近","yesterday":"昨天","berforeyesterday":"前天","daybefore":"天前","runtime":"天"},"sayhello":{"morning":"早上好","noon":"中午好","afternoon":"下午好","night":"晚上好","goodnight":"晚安","iam":"!  我是"}}};</script><script id="site-config">var PAGECONFIG = {"is_home":true,"is_post":false,"is_page":false,"comment":false,"page":false,"toc":false};</script>
     <meta name="generator" content="Hexo 6.3.0"></head>
     <body id="body">
         
@@ -63,6 +58,9 @@
             document.getElementById('body').classList = 'pace-done'
         }
     }
+    window.addEventListener('load',()=> { preloader.endLoading() })
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
 </script>
         
         <div id="console" style="zoom: 1;" class="">
@@ -167,48 +165,8 @@
             </div>
             <div class="card-tag-cloud">
                 
-                    <a href="/tags/%E8%87%AA%E8%BF%B0/" style="font-size: 1em; color: #d3d3d3">自述
-                        <sup>1</sup>
-                    </a>
-                
-                    <a href="/tags/%E9%97%B2%E8%B0%88/" style="font-size: 1em; color: #d3d3d3">闲谈
-                        <sup>1</sup>
-                    </a>
-                
-                    <a href="/tags/Butterfly/" style="font-size: 1em; color: #d3d3d3">Butterfly
-                        <sup>3</sup>
-                    </a>
-                
-                    <a href="/tags/%E5%8A%A0%E8%BD%BD%E6%9D%A1/" style="font-size: 1em; color: #d3d3d3">加载条
-                        <sup>1</sup>
-                    </a>
-                
-                    <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 1em; color: #d3d3d3">网站
-                        <sup>1</sup>
-                    </a>
-                
-                    <a href="/tags/%E5%A4%B4%E5%83%8F/" style="font-size: 1em; color: #d3d3d3">头像
-                        <sup>1</sup>
-                    </a>
-                
-                    <a href="/tags/%E5%A3%81%E7%BA%B8/" style="font-size: 1em; color: #d3d3d3">壁纸
-                        <sup>1</sup>
-                    </a>
-                
-                    <a href="/tags/vscode/" style="font-size: 1em; color: #d3d3d3">vscode
-                        <sup>1</sup>
-                    </a>
-                
-                    <a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 1em; color: #d3d3d3">插件
-                        <sup>1</sup>
-                    </a>
-                
-                    <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 1em; color: #d3d3d3">前端
-                        <sup>2</sup>
-                    </a>
-                
                     <a href="/tags/Hexo/" style="font-size: 1em; color: #d3d3d3">Hexo
-                        <sup>2</sup>
+                        <sup>1</sup>
                     </a>
                 
             </div>
@@ -346,7 +304,7 @@
         </div>
     </div>
 </nav>
-        
+  
 </header>
                 <div id="home_top">
     
@@ -371,7 +329,8 @@
     <i class="bber-gotobb fas fa-arrow-circle-right" title="查看全文" onclick="pjax.loadUrl('/says/')"></i>
 </div>
     
-    <div class="recent-top-post-group" id="recent-top-post-group">
+    
+        <div class="recent-top-post-group" id="recent-top-post-group">
     <div class="recent-post-top" id="recent-post-top">
         <div id="bannerGroup">
             <div id="banners">
@@ -380,14 +339,14 @@
         分享设计<br>与科技生活
     </div>
     <div class="banners-title-small">
-        blog.zhheo.com
+        xiaogu.eu.org
     </div>
 </div>
 <div class="tags-group-all">
     <div class="tags-group-wrapper">
         
             
-            
+                
                 
                     <div class="tags-group-icon-pair">
                     
@@ -395,8 +354,8 @@
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/ae.png" title="AE" loading="lazy">
                     </div>
                 
-                
             
+                
                     
                     <div class="tags-group-icon" style="background: #ffffff">
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/Sketch.png" title="Sketch" loading="lazy">
@@ -404,8 +363,8 @@
                 
                     </div>
                 
-                
             
+                
                 
                     <div class="tags-group-icon-pair">
                     
@@ -413,8 +372,8 @@
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/docker.png" title="Docker" loading="lazy">
                     </div>
                 
-                
             
+                
                     
                     <div class="tags-group-icon" style="background: #4082c3">
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/ps.png" title="ps" loading="lazy">
@@ -422,8 +381,8 @@
                 
                     </div>
                 
-                
             
+                
                 
                     <div class="tags-group-icon-pair">
                     
@@ -431,8 +390,8 @@
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/FinalCutPro.png" title="FinalCutPro" loading="lazy">
                     </div>
                 
-                
             
+                
                     
                     <div class="tags-group-icon" style="background: #ffffff">
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/Python.png" title="Python" loading="lazy">
@@ -440,8 +399,8 @@
                 
                     </div>
                 
-                
             
+                
                 
                     <div class="tags-group-icon-pair">
                     
@@ -449,8 +408,8 @@
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/Swift.png" title="Swift" loading="lazy">
                     </div>
                 
-                
             
+                
                     
                     <div class="tags-group-icon" style="background: #8f55ba">
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/Principle.png" title="Principle" loading="lazy">
@@ -458,8 +417,8 @@
                 
                     </div>
                 
-                
             
+                
                 
                     <div class="tags-group-icon-pair">
                     
@@ -467,8 +426,8 @@
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/illustrator.png" title="illustrator" loading="lazy">
                     </div>
                 
-                
             
+                
                     
                     <div class="tags-group-icon" style="background: #2c51db">
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/CSS3.png" title="CSS3" loading="lazy">
@@ -476,8 +435,8 @@
                 
                     </div>
                 
-                
             
+                
                 
                     <div class="tags-group-icon-pair">
                     
@@ -485,20 +444,19 @@
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/JS.png" title="JS" loading="lazy">
                     </div>
                 
-                
             
+                
                     
                     <div class="tags-group-icon" style="background: #df5b40">
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/git.png" title="Git" loading="lazy">
                     </div>
                 
                     </div>
-                
                 
                
         
             
-            
+                
                 
                     <div class="tags-group-icon-pair">
                     
@@ -506,8 +464,8 @@
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/ae.png" title="AE" loading="lazy">
                     </div>
                 
-                
             
+                
                     
                     <div class="tags-group-icon" style="background: #ffffff">
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/Sketch.png" title="Sketch" loading="lazy">
@@ -515,8 +473,8 @@
                 
                     </div>
                 
-                
             
+                
                 
                     <div class="tags-group-icon-pair">
                     
@@ -524,8 +482,8 @@
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/docker.png" title="Docker" loading="lazy">
                     </div>
                 
-                
             
+                
                     
                     <div class="tags-group-icon" style="background: #4082c3">
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/ps.png" title="ps" loading="lazy">
@@ -533,8 +491,8 @@
                 
                     </div>
                 
-                
             
+                
                 
                     <div class="tags-group-icon-pair">
                     
@@ -542,8 +500,8 @@
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/FinalCutPro.png" title="FinalCutPro" loading="lazy">
                     </div>
                 
-                
             
+                
                     
                     <div class="tags-group-icon" style="background: #ffffff">
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/Python.png" title="Python" loading="lazy">
@@ -551,8 +509,8 @@
                 
                     </div>
                 
-                
             
+                
                 
                     <div class="tags-group-icon-pair">
                     
@@ -560,8 +518,8 @@
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/Swift.png" title="Swift" loading="lazy">
                     </div>
                 
-                
             
+                
                     
                     <div class="tags-group-icon" style="background: #8f55ba">
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/Principle.png" title="Principle" loading="lazy">
@@ -569,8 +527,8 @@
                 
                     </div>
                 
-                
             
+                
                 
                     <div class="tags-group-icon-pair">
                     
@@ -578,8 +536,8 @@
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/illustrator.png" title="illustrator" loading="lazy">
                     </div>
                 
-                
             
+                
                     
                     <div class="tags-group-icon" style="background: #2c51db">
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/CSS3.png" title="CSS3" loading="lazy">
@@ -587,8 +545,8 @@
                 
                     </div>
                 
-                
             
+                
                 
                     <div class="tags-group-icon-pair">
                     
@@ -596,15 +554,14 @@
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/JS.png" title="JS" loading="lazy">
                     </div>
                 
-                
             
+                
                     
                     <div class="tags-group-icon" style="background: #df5b40">
                         <img src= "/img/acrylic.png" data-lazy-src="/img/icon/git.png" title="Git" loading="lazy">
                     </div>
                 
                     </div>
-                
                 
                
             
@@ -673,6 +630,7 @@
         </div>
     </div>
 </div>
+    
 </div>
 <main class="layout" id="content-inner">
     <div class="recent-posts" id="recent-posts">
@@ -683,15 +641,7 @@
     </div>
     
         <div class="category-bar-item ">
-            <a href="/categories/%E5%88%86%E4%BA%AB/">分享</a>
-        </div>
-    
-        <div class="category-bar-item ">
             <a href="/categories/hexo/">hexo</a>
-        </div>
-    
-        <div class="category-bar-item ">
-            <a href="/categories/%E8%BD%AF%E4%BB%B6/">软件</a>
         </div>
     
 </div>
@@ -699,91 +649,10 @@
 
     </div>
     
-        <div class="recent-post-item" onclick="pjax.loadUrl('/posts/e479.html')">
-    <div class="post_cover left_radius">
-        <a href="/posts/e479.html" title="第一篇文章">
-            <img class="post_bg" alt="第一篇文章" src= "/img/acrylic.png" data-lazy-src="https://cdn.xiaogu.tk/ddz4yq.jpg">
-        </a>
-    </div>
-    <div class="recent-post-info">
-        <div class="recent-post-info-top">
-            <div class="recent-post-info-top-tips">
-                
-                    <span class="original">分享</span>
-                
-            </div>
-            <a class="article-title" href="/posts/e479.html" title="第一篇文章">
-                第一篇文章
-            </a>
-        </div>
-        <div class="article-meta-wrap">
-            <span class="article-meta tags">
-                
-                    <a class="article-meta__tags" href="/tags/%E8%87%AA%E8%BF%B0/" onclick="window.event.cancelBubble=true;">
-                        <span class="tags-punctuation">#</span>
-                        自述
-                    </a>
-                
-                    <a class="article-meta__tags" href="/tags/%E9%97%B2%E8%B0%88/" onclick="window.event.cancelBubble=true;">
-                        <span class="tags-punctuation">#</span>
-                        闲谈
-                    </a>
-                
-            </span>
-            <span class="post-meta-date">
-                <time datetime="2023-01-24T19:14:28+00:00"></time>
-            </span>
-        </div>
-    </div>
-</div>
-    
-        <div class="recent-post-item" onclick="pjax.loadUrl('/posts/7fd3.html')">
-    <div class="post_cover left_radius">
-        <a href="/posts/7fd3.html" title="给Hexo博客添加一个切换壁纸功能">
-            <img class="post_bg" alt="给Hexo博客添加一个切换壁纸功能" src= "/img/acrylic.png" data-lazy-src="https://cdn.xiaogu.tk/ddz4yq.jpg">
-        </a>
-    </div>
-    <div class="recent-post-info">
-        <div class="recent-post-info-top">
-            <div class="recent-post-info-top-tips">
-                
-                    <span class="original">hexo</span>
-                
-            </div>
-            <a class="article-title" href="/posts/7fd3.html" title="给Hexo博客添加一个切换壁纸功能">
-                给Hexo博客添加一个切换壁纸功能
-            </a>
-        </div>
-        <div class="article-meta-wrap">
-            <span class="article-meta tags">
-                
-                    <a class="article-meta__tags" href="/tags/Butterfly/" onclick="window.event.cancelBubble=true;">
-                        <span class="tags-punctuation">#</span>
-                        Butterfly
-                    </a>
-                
-                    <a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/" onclick="window.event.cancelBubble=true;">
-                        <span class="tags-punctuation">#</span>
-                        前端
-                    </a>
-                
-                    <a class="article-meta__tags" href="/tags/Hexo/" onclick="window.event.cancelBubble=true;">
-                        <span class="tags-punctuation">#</span>
-                        Hexo
-                    </a>
-                
-            </span>
-            <span class="post-meta-date">
-                <time datetime="2022-12-24T19:21:17+00:00"></time>
-            </span>
-        </div>
-    </div>
-</div>
-    
         <div class="recent-post-item" onclick="pjax.loadUrl('/posts/16107.html')">
     <div class="post_cover left_radius">
         <a href="/posts/16107.html" title="Hello World">
-            <img class="post_bg" alt="Hello World" src= "/img/acrylic.png" data-lazy-src="https://cdn.xiaogu.tk/ddz4yq.jpg">
+            <img class="post_bg" alt="Hello World" src= "/img/acrylic.png" data-lazy-src="https://cdn.xiaogu.tk/wallhaven-9dmwdx_1600x900.webp">
         </a>
     </div>
     <div class="recent-post-info">
@@ -800,16 +669,6 @@
         <div class="article-meta-wrap">
             <span class="article-meta tags">
                 
-                    <a class="article-meta__tags" href="/tags/Butterfly/" onclick="window.event.cancelBubble=true;">
-                        <span class="tags-punctuation">#</span>
-                        Butterfly
-                    </a>
-                
-                    <a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/" onclick="window.event.cancelBubble=true;">
-                        <span class="tags-punctuation">#</span>
-                        前端
-                    </a>
-                
                     <a class="article-meta__tags" href="/tags/Hexo/" onclick="window.event.cancelBubble=true;">
                         <span class="tags-punctuation">#</span>
                         Hexo
@@ -818,125 +677,6 @@
             </span>
             <span class="post-meta-date">
                 <time datetime="2022-12-24T19:21:17+00:00"></time>
-            </span>
-        </div>
-    </div>
-</div>
-    
-        <div class="recent-post-item" onclick="pjax.loadUrl('/posts/2bfa.html')">
-    <div class="post_cover left_radius">
-        <a href="/posts/2bfa.html" title="VS插件推荐">
-            <img class="post_bg" alt="VS插件推荐" src= "/img/acrylic.png" data-lazy-src="https://cdn.xiaogu.tk/ddz4yq.jpg">
-        </a>
-    </div>
-    <div class="recent-post-info">
-        <div class="recent-post-info-top">
-            <div class="recent-post-info-top-tips">
-                
-                    <span class="original">软件</span>
-                
-            </div>
-            <a class="article-title" href="/posts/2bfa.html" title="VS插件推荐">
-                VS插件推荐
-            </a>
-        </div>
-        <div class="article-meta-wrap">
-            <span class="article-meta tags">
-                
-                    <a class="article-meta__tags" href="/tags/vscode/" onclick="window.event.cancelBubble=true;">
-                        <span class="tags-punctuation">#</span>
-                        vscode
-                    </a>
-                
-                    <a class="article-meta__tags" href="/tags/%E6%8F%92%E4%BB%B6/" onclick="window.event.cancelBubble=true;">
-                        <span class="tags-punctuation">#</span>
-                        插件
-                    </a>
-                
-            </span>
-            <span class="post-meta-date">
-                <time datetime="2022-12-24T19:19:19+00:00"></time>
-            </span>
-        </div>
-    </div>
-</div>
-    
-        <div class="recent-post-item" onclick="pjax.loadUrl('/posts/df82.html')">
-    <div class="post_cover left_radius">
-        <a href="/posts/df82.html" title="好用的网站合集">
-            <img class="post_bg" alt="好用的网站合集" src= "/img/acrylic.png" data-lazy-src="https://cdn.xiaogu.tk/ddz4yq.jpg">
-        </a>
-    </div>
-    <div class="recent-post-info">
-        <div class="recent-post-info-top">
-            <div class="recent-post-info-top-tips">
-                
-                    <span class="original">分享</span>
-                
-            </div>
-            <a class="article-title" href="/posts/df82.html" title="好用的网站合集">
-                好用的网站合集
-            </a>
-        </div>
-        <div class="article-meta-wrap">
-            <span class="article-meta tags">
-                
-                    <a class="article-meta__tags" href="/tags/%E7%BD%91%E7%AB%99/" onclick="window.event.cancelBubble=true;">
-                        <span class="tags-punctuation">#</span>
-                        网站
-                    </a>
-                
-                    <a class="article-meta__tags" href="/tags/%E5%A4%B4%E5%83%8F/" onclick="window.event.cancelBubble=true;">
-                        <span class="tags-punctuation">#</span>
-                        头像
-                    </a>
-                
-                    <a class="article-meta__tags" href="/tags/%E5%A3%81%E7%BA%B8/" onclick="window.event.cancelBubble=true;">
-                        <span class="tags-punctuation">#</span>
-                        壁纸
-                    </a>
-                
-            </span>
-            <span class="post-meta-date">
-                <time datetime="2022-12-24T19:18:09+00:00"></time>
-            </span>
-        </div>
-    </div>
-</div>
-    
-        <div class="recent-post-item" onclick="pjax.loadUrl('/posts/cdcd.html')">
-    <div class="post_cover left_radius">
-        <a href="/posts/cdcd.html" title="给Butterfly加上顶部加载条">
-            <img class="post_bg" alt="给Butterfly加上顶部加载条" src= "/img/acrylic.png" data-lazy-src="https://cdn.xiaogu.tk/ddz4yq.jpg">
-        </a>
-    </div>
-    <div class="recent-post-info">
-        <div class="recent-post-info-top">
-            <div class="recent-post-info-top-tips">
-                
-                    <span class="original">hexo</span>
-                
-            </div>
-            <a class="article-title" href="/posts/cdcd.html" title="给Butterfly加上顶部加载条">
-                给Butterfly加上顶部加载条
-            </a>
-        </div>
-        <div class="article-meta-wrap">
-            <span class="article-meta tags">
-                
-                    <a class="article-meta__tags" href="/tags/Butterfly/" onclick="window.event.cancelBubble=true;">
-                        <span class="tags-punctuation">#</span>
-                        Butterfly
-                    </a>
-                
-                    <a class="article-meta__tags" href="/tags/%E5%8A%A0%E8%BD%BD%E6%9D%A1/" onclick="window.event.cancelBubble=true;">
-                        <span class="tags-punctuation">#</span>
-                        加载条
-                    </a>
-                
-            </span>
-            <span class="post-meta-date">
-                <time datetime="2022-12-24T19:15:35+00:00"></time>
             </span>
         </div>
     </div>
@@ -999,48 +739,10 @@
         
         
             <div class="aside-list-item">
-                <a class="thumbnail" href="/posts/e479.html" title="第一篇文章">
-                    <img
-                        alt="第一篇文章"
-                        src="https://cdn.xiaogu.tk/ddz4yq.jpg">
-                </a>
-                <div class="content">
-                    
-                        <a class="article-recent_post_categories" href="/posts/e479.html">
-                            分享
-                        </a>
-                    
-                    <a class="title" href="/posts/e479.html" title="第一篇文章">
-                        第一篇文章
-                    </a>
-                </div>
-            </div>
-                
-        
-            <div class="aside-list-item">
-                <a class="thumbnail" href="/posts/7fd3.html" title="给Hexo博客添加一个切换壁纸功能">
-                    <img
-                        alt="给Hexo博客添加一个切换壁纸功能"
-                        src="https://cdn.xiaogu.tk/ddz4yq.jpg">
-                </a>
-                <div class="content">
-                    
-                        <a class="article-recent_post_categories" href="/posts/7fd3.html">
-                            hexo
-                        </a>
-                    
-                    <a class="title" href="/posts/7fd3.html" title="给Hexo博客添加一个切换壁纸功能">
-                        给Hexo博客添加一个切换壁纸功能
-                    </a>
-                </div>
-            </div>
-                
-        
-            <div class="aside-list-item">
                 <a class="thumbnail" href="/posts/16107.html" title="Hello World">
                     <img
                         alt="Hello World"
-                        src="https://cdn.xiaogu.tk/ddz4yq.jpg">
+                        src="https://cdn.xiaogu.tk/wallhaven-9dmwdx_1600x900.webp">
                 </a>
                 <div class="content">
                     
@@ -1055,82 +757,19 @@
             </div>
                 
         
-            <div class="aside-list-item">
-                <a class="thumbnail" href="/posts/2bfa.html" title="VS插件推荐">
-                    <img
-                        alt="VS插件推荐"
-                        src="https://cdn.xiaogu.tk/ddz4yq.jpg">
-                </a>
-                <div class="content">
-                    
-                        <a class="article-recent_post_categories" href="/posts/2bfa.html">
-                            软件
-                        </a>
-                    
-                    <a class="title" href="/posts/2bfa.html" title="VS插件推荐">
-                        VS插件推荐
-                    </a>
-                </div>
-            </div>
-                
-        
-            <div class="aside-list-item">
-                <a class="thumbnail" href="/posts/df82.html" title="好用的网站合集">
-                    <img
-                        alt="好用的网站合集"
-                        src="https://cdn.xiaogu.tk/ddz4yq.jpg">
-                </a>
-                <div class="content">
-                    
-                        <a class="article-recent_post_categories" href="/posts/df82.html">
-                            分享
-                        </a>
-                    
-                    <a class="title" href="/posts/df82.html" title="好用的网站合集">
-                        好用的网站合集
-                    </a>
-                </div>
-            </div>
-            
     </div>
 </div> 
         
     <div class="card-widget card-tags card-archives card-webinfo card-allinfo">
     <div class="card-tag-cloud">
-        
-            <a href="/tags/%E8%87%AA%E8%BF%B0/" style="font-size: 0.8rem; color: #d3d3d3">自述<sup>1</sup></a>
-        
-            <a href="/tags/%E9%97%B2%E8%B0%88/" style="font-size: 0.8rem; color: #d3d3d3">闲谈<sup>1</sup></a>
-        
-            <a href="/tags/Butterfly/" style="font-size: 0.8rem; color: #d3d3d3">Butterfly<sup>3</sup></a>
-        
-            <a href="/tags/%E5%8A%A0%E8%BD%BD%E6%9D%A1/" style="font-size: 0.8rem; color: #d3d3d3">加载条<sup>1</sup></a>
-        
-            <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 0.8rem; color: #d3d3d3">网站<sup>1</sup></a>
-        
-            <a href="/tags/%E5%A4%B4%E5%83%8F/" style="font-size: 0.8rem; color: #d3d3d3">头像<sup>1</sup></a>
-        
-            <a href="/tags/%E5%A3%81%E7%BA%B8/" style="font-size: 0.8rem; color: #d3d3d3">壁纸<sup>1</sup></a>
-        
-            <a href="/tags/vscode/" style="font-size: 0.8rem; color: #d3d3d3">vscode<sup>1</sup></a>
-        
-            <a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 0.8rem; color: #d3d3d3">插件<sup>1</sup></a>
-        
-            <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 0.8rem; color: #d3d3d3">前端<sup>2</sup></a>
-        
-            <a href="/tags/Hexo/" style="font-size: 0.8rem; color: #d3d3d3">Hexo<sup>2</sup></a>
-        
-        <ul class="card-archive-list">
+    
+        <a href="/tags/Hexo/" style="font-size: 0.8rem; color: #d3d3d3">Hexo<sup>1</sup></a>
+    
+</div>
+    <ul class="card-archive-list">
     
         <li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2022/')" data-pjax-state=""><span
             class="card-archive-list-date">2022</span>
-            <div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span
-                    class="card-archive-list-count-unit">篇</span></div>
-            </a>
-        </li>
-    
-        <li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2023/')" data-pjax-state=""><span
-            class="card-archive-list-date">2023</span>
             <div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span
                     class="card-archive-list-count-unit">篇</span></div>
             </a>
@@ -1138,34 +777,33 @@
         
 </ul>
 
-        <hr>
-        <div class="webinfo">
-            <div class="webinfo-item">
-                <div class="webinfo-item-title">
-                    <i class="item-icon fas fa-file-alt"></i>
-                    <div class="item-name">文章总数 :</div>
-                </div>
-                <div class="item-count">6</div>
-            </div>
-            <div class="webinfo-item">
-                <div class="webinfo-item-title">
-                    <i class="item-icon fas fa-stopwatch"></i>
-                    <div class="item-name">建站天数 :</div>
-                </div>
-                <div class="item-count">94 天
-                </div>
-            </div>
-            
-                <div class="webinfo-item">
-                    <div class="webinfo-item-title">
-                        <i class="item-icon fas fa-font"></i>
-                        <div class="item-name">全站字数 :</div>
-                    </div>
-                    <div class="item-count">4.5k</div>
-                </div>
-            
+    <hr>
+    <div class="webinfo">
+    <div class="webinfo-item">
+        <div class="webinfo-item-title">
+            <i class="item-icon fas fa-file-alt"></i>
+            <div class="item-name">文章总数 :</div>
+        </div>
+        <div class="item-count">1</div>
+    </div>
+    <div class="webinfo-item">
+        <div class="webinfo-item-title">
+            <i class="item-icon fas fa-stopwatch"></i>
+            <div class="item-name">建站天数 :</div>
+        </div>
+        <div class="item-count">96 天
         </div>
     </div>
+    
+        <div class="webinfo-item">
+            <div class="webinfo-item-title">
+                <i class="item-icon fas fa-font"></i>
+                <div class="item-name">全站字数 :</div>
+            </div>
+            <div class="item-count">75</div>
+        </div>
+    
+</div>
 </div>
 
     </div>
@@ -1271,9 +909,10 @@
                 </footer>
             </div>
            
-        <script type="text/javascript" src="/js/utils.js"></script>
-<script type="text/javascript" src="/js/main.js"></script>
-
+        <div>
+    <script type="text/javascript" src="/js/utils.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    
 
 <script src="/lib/pjax.min.js"></script>
 
@@ -1281,25 +920,14 @@
     
 <script src="/lib/lazyload.min.js"></script>
 
-    <script>
-    window.lazyLoadInstance = new LazyLoad({
-        elements_selector: 'img',
-        threshold: 0,
-        data_src: 'lazy-src',
-        callback_error: (img) => {
-            img.setAttribute("src", "/img/acrylic.png");
-        }
-    })
-</script>
 
 
 <script src="/lib/snackbar.min.js"></script>
 
 
+    
 <script src="/lib/view-image.min.js"></script>
 
-
-<script src="/lib/waterfall.min.js"></script>
 
 
     
@@ -1310,12 +938,17 @@
 
 
 
-<script>
+<div id="js-pjax">
+     
+</div>
+
+    <script>
   let pjaxSelectors = [
     'title',
     '#body-wrap',
-    '.site-config',
-    'meta[name="description"]'
+    '#site-config',
+    'meta[name="description"]',
+    '#js-pjax'
   ]
   
   const pjax = new Pjax({
@@ -1325,26 +958,6 @@
     analytics: false,
     scrollRestoration: false
   })
-  
-  window.addEventListener('DOMContentLoaded', () => {
-          lazyLoadInstance.update()
-      
-          preloader.endLoading() 
-       
-  })
-  document.addEventListener('pjax:send', () => {
-     
-      preloader.initLoading() 
-    
-  })
-  document.addEventListener('pjax:complete', () => { 
-          preloader.endLoading()
-              preloader.removePaceDone()
-       
-      
-          lazyLoadInstance.update()
-       
-  })
 
   document.addEventListener('pjax:error', (e) => {
     if (e.request.status === 404) {
@@ -1352,7 +965,8 @@
     }
   })
 </script>
-
+    
+</div>
     </body>
 </html>
-<script>const posts=["posts/e479.html","posts/7fd3.html","posts/16107.html","posts/2bfa.html","posts/df82.html","posts/cdcd.html"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>
+<script>const posts=["posts/16107.html"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>
