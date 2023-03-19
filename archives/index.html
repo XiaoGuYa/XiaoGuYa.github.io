@@ -36,7 +36,12 @@
 
 
 
-<script>var GOBALCONFIG = {"root":"/","runtime":"2022-12-12 00:00:00","lazyload":{"enable":true,"error":"/img/acrylic.png"},"lightbox":true,"randomlinks":false,"lang":{"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"recent":"最近","yesterday":"昨天","berforeyesterday":"前天","daybefore":"天前","runtime":"天"},"sayhello":{"morning":"早上好","noon":"中午好","afternoon":"下午好","night":"晚上好","goodnight":"晚安","iam":"!  我是"}}};</script><script id="site-config">var PAGECONFIG = {"is_home":false,"is_post":false,"is_page":false,"comment":false,"page":false,"toc":false};</script>
+<div class="site-config">
+    <script>
+        var GOBALPAGE = "temp"
+    </script> 
+</div>
+
     <meta name="generator" content="Hexo 6.3.0"></head>
     <body id="body">
         
@@ -58,9 +63,6 @@
             document.getElementById('body').classList = 'pace-done'
         }
     }
-    window.addEventListener('load',()=> { preloader.endLoading() })
-    document.addEventListener('pjax:send', () => { preloader.initLoading() })
-    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
 </script>
         
         <div id="console" style="zoom: 1;" class="">
@@ -132,7 +134,7 @@
                 <ul class="menus_item_child">
                     
                         <li>
-                            <a class="site-page child" href="/says/">
+                            <a class="site-page child" href="/zone/">
                                 <i class="fas fa-cloud-rain"></i>
                                 <span> 动态</span>
                             </a>
@@ -148,7 +150,7 @@
                         <li>
                             <a class="site-page child" href="/links/">
                                 <i class="fas fa-link"></i>
-                                <span> 友链</span>
+                                <span> 收藏</span>
                             </a>
                         </li>
                     
@@ -234,7 +236,7 @@
                 <ul class="menus_item_child">
                     
                         <li>
-                            <a class="site-page child" href="/says/">
+                            <a class="site-page child" href="/zone/">
                                 <i class="fas fa-cloud-rain"></i>
                                 <span> 动态</span>
                             </a>
@@ -250,7 +252,7 @@
                         <li>
                             <a class="site-page child" href="/links/">
                                 <i class="fas fa-link"></i>
-                                <span> 友链</span>
+                                <span> 收藏</span>
                             </a>
                         </li>
                     
@@ -304,7 +306,7 @@
         </div>
     </div>
 </nav>
-  
+ 
 </header>
                 <main class="layout" id="content-inner">
     <div id="archive">
@@ -387,11 +389,10 @@
         
     <div class="card-widget card-tags card-archives card-webinfo card-allinfo">
     <div class="card-tag-cloud">
-    
-        <a href="/tags/Hexo/" style="font-size: 0.8rem; color: #d3d3d3">Hexo<sup>1</sup></a>
-    
-</div>
-    <ul class="card-archive-list">
+        
+            <a href="/tags/Hexo/" style="font-size: 0.8rem; color: #d3d3d3">Hexo<sup>1</sup></a>
+        
+        <ul class="card-archive-list">
     
         <li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2022/')" data-pjax-state=""><span
             class="card-archive-list-date">2022</span>
@@ -402,33 +403,34 @@
         
 </ul>
 
-    <hr>
-    <div class="webinfo">
-    <div class="webinfo-item">
-        <div class="webinfo-item-title">
-            <i class="item-icon fas fa-file-alt"></i>
-            <div class="item-name">文章总数 :</div>
-        </div>
-        <div class="item-count">1</div>
-    </div>
-    <div class="webinfo-item">
-        <div class="webinfo-item-title">
-            <i class="item-icon fas fa-stopwatch"></i>
-            <div class="item-name">建站天数 :</div>
-        </div>
-        <div class="item-count">97 天
-        </div>
-    </div>
-    
-        <div class="webinfo-item">
-            <div class="webinfo-item-title">
-                <i class="item-icon fas fa-font"></i>
-                <div class="item-name">全站字数 :</div>
+        <hr>
+        <div class="webinfo">
+            <div class="webinfo-item">
+                <div class="webinfo-item-title">
+                    <i class="item-icon fas fa-file-alt"></i>
+                    <div class="item-name">文章总数 :</div>
+                </div>
+                <div class="item-count">1</div>
             </div>
-            <div class="item-count">75</div>
+            <div class="webinfo-item">
+                <div class="webinfo-item-title">
+                    <i class="item-icon fas fa-stopwatch"></i>
+                    <div class="item-name">建站天数 :</div>
+                </div>
+                <div class="item-count">97 天
+                </div>
+            </div>
+            
+                <div class="webinfo-item">
+                    <div class="webinfo-item-title">
+                        <i class="item-icon fas fa-font"></i>
+                        <div class="item-name">全站字数 :</div>
+                    </div>
+                    <div class="item-count">75</div>
+                </div>
+            
         </div>
-    
-</div>
+    </div>
 </div>
 
     </div>
@@ -534,10 +536,9 @@
                 </footer>
             </div>
            
-        <div>
-    <script type="text/javascript" src="/js/utils.js"></script>
-    <script type="text/javascript" src="/js/main.js"></script>
-    
+        <script type="text/javascript" src="/js/utils.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
 
 <script src="/lib/pjax.min.js"></script>
 
@@ -545,14 +546,25 @@
     
 <script src="/lib/lazyload.min.js"></script>
 
+    <script>
+    window.lazyLoadInstance = new LazyLoad({
+        elements_selector: 'img',
+        threshold: 0,
+        data_src: 'lazy-src',
+        callback_error: (img) => {
+            img.setAttribute("src", "/img/acrylic.png");
+        }
+    })
+</script>
 
 
 <script src="/lib/snackbar.min.js"></script>
 
 
-    
 <script src="/lib/view-image.min.js"></script>
 
+
+<script src="/lib/waterfall.min.js"></script>
 
 
     
@@ -563,17 +575,12 @@
 
 
 
-<div id="js-pjax">
-     
-</div>
-
-    <script>
+<script>
   let pjaxSelectors = [
     'title',
     '#body-wrap',
-    '#site-config',
-    'meta[name="description"]',
-    '#js-pjax'
+    '.site-config',
+    'meta[name="description"]'
   ]
   
   const pjax = new Pjax({
@@ -583,6 +590,26 @@
     analytics: false,
     scrollRestoration: false
   })
+  
+  window.addEventListener('DOMContentLoaded', () => {
+          lazyLoadInstance.update()
+      
+          preloader.endLoading() 
+       
+  })
+  document.addEventListener('pjax:send', () => {
+     
+      preloader.initLoading() 
+    
+  })
+  document.addEventListener('pjax:complete', () => { 
+          preloader.endLoading()
+              preloader.removePaceDone()
+       
+      
+          lazyLoadInstance.update()
+       
+  })
 
   document.addEventListener('pjax:error', (e) => {
     if (e.request.status === 404) {
@@ -590,8 +617,9 @@
     }
   })
 </script>
-    
-</div>
+
+    <script type="text/javascript" src="/lib/zone.js"></script>
+
     </body>
 </html>
 <script>const posts=["posts/16107.html"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>

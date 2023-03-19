@@ -91,36 +91,39 @@ const showTodayCard = () => {
 const setTimeState = () => {
     const el = document.getElementById('author-info__sayhi')
     if (el) {
-        const timeNow = new Date(), hours = timeNow.getHours(), lang = GOBALCONFIG.lang.sayhello;
+        const timeNow = new Date();
+        const hours = timeNow.getHours();
         let text = '';
         if (hours >= 0 && hours <= 5) {
-            text = lang.goodnight;
+            text = '晚安';
         } else if (hours > 5 && hours <= 10) {
-            text = lang.morning;
+            text = '早上好';
         } else if (hours > 10 && hours <= 14) {
-            text = lang.noon;
+            text = '中午好';
         } else if (hours > 14 && hours <= 18) {
-            text = lang.afternoon;
+            text = '下午好';
         } else if (hours > 18 && hours <= 24) {
-            text = lang.night;
+            text = '晚上好';
         }
-        el.innerText = text + lang.iam;
+        el.innerText = text + ' !  我是'
     }
 };
 
 const chageTimeFormate = () => {
-    const timeElements = document.getElementsByTagName("time"), lang = GOBALCONFIG.lang.sayhello
+    var timeElements = document.getElementsByTagName("time")
     for (var i = 0; i < timeElements.length; i++) {
-        const datetime = timeElements[i].getAttribute("datetime"), timeObj = new Date(datetime), daysDiff = utils.timeDiff(timeObj, new Date())
+        var datetime = timeElements[i].getAttribute("datetime")
+        var timeObj = new Date(datetime)
+        var daysDiff = utils.timeDiff(timeObj, new Date())
         var timeString;
         if (daysDiff === 0) {
-            timeString = lang.recent;
+            timeString = "最近";
         } else if (daysDiff === 1) {
-            timeString = lang.yesterday;
+            timeString = "昨天";
         } else if (daysDiff === 2) {
-            timeString = lang.berforeyesterday;
+            timeString = "前天";
         } else if (daysDiff <= 7) {
-            timeString = daysDiff + lang.daybefore;
+            timeString = daysDiff + "天前";
         } else {
             if (timeObj.getFullYear() !== new Date().getFullYear()) {
                 timeString = timeObj.getFullYear() + "/" + (timeObj.getMonth() + 1) + "/" + timeObj.getDate();
@@ -142,7 +145,7 @@ const percent = () => {
     const centerY = eventlistner.offsetTop + (eventlistner.offsetHeight / 2);
     if ((centerY < visibleBottom) || (result > 90)) {
         document.querySelector("#nav-totop").classList.add("long");
-        btn.innerHTML = GOBALCONFIG.lang.backtop;
+        btn.innerHTML = "返回顶部";
     } else {
         document.querySelector("#nav-totop").classList.remove("long");
         if (result >= 0) {
@@ -223,11 +226,11 @@ class acrylic {
         if (nowMode === 'light') {
             document.documentElement.setAttribute('data-theme', 'dark')
             localStorage.setItem('theme', 'dark')
-            utils.snackbarShow(GOBALCONFIG.lang.theme.dark, false, 2000)
+            utils.snackbarShow('已切换至深色模式', false, 2000)
         } else {
             document.documentElement.setAttribute('data-theme', 'light')
             localStorage.setItem('theme', 'light')
-            utils.snackbarShow(GOBALCONFIG.lang.theme.light, false, 2000)
+            utils.snackbarShow('已切换至浅色模式', false, 2000)
         }
     }
     static hideTodayCard() {
@@ -251,13 +254,13 @@ class acrylic {
     static async copyPageUrl() {
         try {
             await navigator.clipboard.writeText(window.location.href)
-            utils.snackbarShow(GOBALCONFIG.lang.copy.success, false, 2000)
+            utils.snackbarShow('已将页面链接复制至剪贴板', false, 2000)
         } catch (err) {
-            utils.snackbarShow(GOBALCONFIG.lang.copy.error, false, 2000)
+            utils.snackbarShow('无法将页面链接复制至剪贴板 : ' + err, false, 2000)
         }
     }
-    static lightbox(el) {
-        window.ViewImage && ViewImage.init(el);
+    static lightbox() {
+        window.ViewImage && ViewImage.init('#article-container img, #bber .bber-content-img img');
     }
     static initTheme() {
         const nowMode = localStorage.getItem('theme')
@@ -277,21 +280,27 @@ class acrylic {
         const $runtimeCount = document.getElementById('runtimeshow')
         if ($runtimeCount) {
           const runtime = $runtimeCount.getAttribute('data-runtime')
-          $runtimeCount.innerText = utils.timeDiff(new Date(runtime), new Date()) + GOBALCONFIG.lang.time.runtime
+          $runtimeCount.innerText = utils.timeDiff(new Date(runtime), new Date()) + ' 天'
           console.log(new Date(runtime), new Date())
         }
-    }
-    static lazyloadImg(){
-        window.lazyLoadInstance = new LazyLoad({
-          elements_selector: 'img',
-          threshold: 0,
-          data_src: 'lazy-src',
-          callback_error: (img) => {
-            img.setAttribute("src", GOBALCONFIG.lazyload.error);
-          }
-        })
       }
-    static initbbtalk(){
+}
+
+const allPage = () => {
+    scrollFn()
+    sidebarFn()
+    if (typeof randomLinksList === 'function') {
+        randomLinksList();
+    }
+    setTimeState()
+    chageTimeFormate()
+    acrylic.initTheme()
+    acrylic.addRuntime()
+}
+
+const onlyHome = () => {
+    if (GOBALPAGE === 'home') {
+        showTodayCard()
         if (document.querySelector('#bber-talk')) {
             var swiper = new Swiper('.swiper-container', {
                 direction: 'vertical',
@@ -305,29 +314,38 @@ class acrylic {
     }
 }
 
-window.refreshFn = () => {
-    scrollFn()
-    sidebarFn()
-    setTimeState()
-    chageTimeFormate()
-    acrylic.addRuntime()
-    GOBALCONFIG.lazyload.enable && acrylic.lazyloadImg()
-    GOBALCONFIG.lightbox && acrylic.lightbox('#article-container img, #bber .bber-content-img img')
-    if(PAGECONFIG.is_home){
-        showTodayCard()
-        acrylic.initbbtalk()
+const onlyPost = () => {
+    if (GOBALPAGE === 'post') {
+        toc.init()
     }
-    if(PAGECONFIG.is_page && PAGECONFIG.page === 'says')acrylic.reflashEssayWaterFall()
-    PAGECONFIG.toc && toc.init()
-    PAGECONFIG.comment && initComment()
-    GOBALCONFIG.randomlinks && randomLinksList()
 }
 
-acrylic.initTheme()
-document.addEventListener('DOMContentLoaded', function () {
-    refreshFn()
+const onlyPostandPage = () => {
+    if (GOBALPAGE === 'post' || GOBALPAGE === 'page') {
+        acrylic.lightbox()
+        if (typeof initComment === 'function') {
+            initComment();
+        }
+        acrylic.reflashEssayWaterFall()
+    }
+}
+
+window.addEventListener('resize', utils.throttle(function () {
+    if (document.getElementById('waterfall')) {
+        acrylic.reflashEssayWaterFall();
+    }
+}), 500);
+
+window.addEventListener('DOMContentLoaded', () => {
+    allPage()
+    onlyHome()
+    onlyPost()
+    onlyPostandPage()
 })
 
-document.addEventListener('pjax:complete', () => { 
-    window.refreshFn()
+document.addEventListener('pjax:complete',() => {
+    allPage()
+    onlyHome()
+    onlyPost()
+    onlyPostandPage()
 })

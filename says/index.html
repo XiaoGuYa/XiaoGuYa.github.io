@@ -36,7 +36,12 @@
 
 
 
-<script>var GOBALCONFIG = {"root":"/","runtime":"2022-12-12 00:00:00","lazyload":{"enable":true,"error":"/img/acrylic.png"},"lightbox":true,"randomlinks":false,"lang":{"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"recent":"最近","yesterday":"昨天","berforeyesterday":"前天","daybefore":"天前","runtime":"天"},"sayhello":{"morning":"早上好","noon":"中午好","afternoon":"下午好","night":"晚上好","goodnight":"晚安","iam":"!  我是"}}};</script><script id="site-config">var PAGECONFIG = {"is_home":false,"is_post":false,"is_page":true,"comment":true,"page":"says","toc":false};</script>
+<div class="site-config">
+    <script>
+        var GOBALPAGE = "page"
+    </script> 
+</div>
+
     <meta name="generator" content="Hexo 6.3.0"></head>
     <body id="body">
         
@@ -58,9 +63,6 @@
             document.getElementById('body').classList = 'pace-done'
         }
     }
-    window.addEventListener('load',()=> { preloader.endLoading() })
-    document.addEventListener('pjax:send', () => { preloader.initLoading() })
-    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
 </script>
         
         <div id="console" style="zoom: 1;" class="">
@@ -132,7 +134,7 @@
                 <ul class="menus_item_child">
                     
                         <li>
-                            <a class="site-page child" href="/says/">
+                            <a class="site-page child" href="/zone/">
                                 <i class="fas fa-cloud-rain"></i>
                                 <span> 动态</span>
                             </a>
@@ -148,7 +150,7 @@
                         <li>
                             <a class="site-page child" href="/links/">
                                 <i class="fas fa-link"></i>
-                                <span> 友链</span>
+                                <span> 收藏</span>
                             </a>
                         </li>
                     
@@ -234,7 +236,7 @@
                 <ul class="menus_item_child">
                     
                         <li>
-                            <a class="site-page child" href="/says/">
+                            <a class="site-page child" href="/zone/">
                                 <i class="fas fa-cloud-rain"></i>
                                 <span> 动态</span>
                             </a>
@@ -250,7 +252,7 @@
                         <li>
                             <a class="site-page child" href="/links/">
                                 <i class="fas fa-link"></i>
-                                <span> 友链</span>
+                                <span> 收藏</span>
                             </a>
                         </li>
                     
@@ -304,66 +306,34 @@
         </div>
     </div>
 </nav>
-  
+ 
 </header>
                 <main class="layout hide-aside" id="content-inner">
     <div id="page">
         
-                <div class="author-content author-content-item essayPage single nolazyload" style="background: url(https://cdn.xiaogu.tk/20230305201201.png) no-repeat center;background-size: cover;">
-    <div class="card-content">
-        <div class="author-content-item-tips">即刻短文</div>
-        <span class="author-content-item-title">分享生活的小确幸</span>
-        <div class="content-bottom">
-            <div class="tips">使用 即刻短文静态部署版 构建</div>
-        </div>
-    </div>
+                <div id="article-container">
+    
 </div>
-<div id="bber">
-    <section class="timeline page-1">
-        <ul class="list" id="waterfall">
-            
-                
-                <li class="item">
-                    <div class="bber-content">
-    <p class="datacont">终于把这个弄出来了，看来没有文档指引，还是不懂啊</p>
-        
-</div>
-                    <hr>
-                    <div class="bber-bottom">
-    <div class="bber-info">
-        <div class="bber-info-time">
-            <i class="fas fa-calendar-days"></i>
-            <time class="datetime" datetime="2023-03-16T00:00:00+00:00"></time>
-        </div>
-            
-    </div>
-</div>
-                </li>
-            
-                
-                <li class="item">
-                    <div class="bber-content">
-    <p class="datacont">今天是emo的一天</p>
-        
-</div>
-                    <hr>
-                    <div class="bber-bottom">
-    <div class="bber-info">
-        <div class="bber-info-time">
-            <i class="fas fa-calendar-days"></i>
-            <time class="datetime" datetime="2023-03-13T08:00:00+00:00"></time>
-        </div>
-            
-    </div>
-</div>
-                </li>
-            
-        </ul>
-    </section>
-</div>
-<div id="bber-tips" style="color: var(--heo-secondtext);">- 只展示最近30条短文 -</div>
-
              
+            
+                <div id="post-comment">
+    <div class="comment-head">
+        <div class="comment-headline"><i class="fas fa-message fa-fw"></i><span> 评论</span></div>
+        <!-- <div class="comment-privacy"><a href="/privacy/" data-pjax-state="">隐私政策</a></div> -->
+        <!-- <div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div> -->
+    </div>
+    <div class="comment-wrap">
+        <div id="tcomment"></div>
+        <script>
+            function initComment(){
+               twikoo.init({
+                envId: 'https://www.guzx.tk',
+                el: '#tcomment',
+             }) 
+            }
+        </script>
+    </div>
+</div>
                 
     </div>
        
@@ -469,10 +439,9 @@
                 </footer>
             </div>
            
-        <div>
-    <script type="text/javascript" src="/js/utils.js"></script>
-    <script type="text/javascript" src="/js/main.js"></script>
-    
+        <script type="text/javascript" src="/js/utils.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
 
 <script src="/lib/pjax.min.js"></script>
 
@@ -480,14 +449,25 @@
     
 <script src="/lib/lazyload.min.js"></script>
 
+    <script>
+    window.lazyLoadInstance = new LazyLoad({
+        elements_selector: 'img',
+        threshold: 0,
+        data_src: 'lazy-src',
+        callback_error: (img) => {
+            img.setAttribute("src", "/img/acrylic.png");
+        }
+    })
+</script>
 
 
 <script src="/lib/snackbar.min.js"></script>
 
 
-    
 <script src="/lib/view-image.min.js"></script>
 
+
+<script src="/lib/waterfall.min.js"></script>
 
 
     
@@ -498,28 +478,12 @@
 
 
 
-<div id="js-pjax">
-    
-        
-<script src="/lib/waterfall.min.js"></script>
-
-        <script>
-            window.addEventListener('resize', utils.throttle(function () {
-                if (document.getElementById('waterfall')) {
-                    acrylic.reflashEssayWaterFall();
-                }
-            }), 500);
-        </script>
-     
-</div>
-
-    <script>
+<script>
   let pjaxSelectors = [
     'title',
     '#body-wrap',
-    '#site-config',
-    'meta[name="description"]',
-    '#js-pjax'
+    '.site-config',
+    'meta[name="description"]'
   ]
   
   const pjax = new Pjax({
@@ -529,6 +493,26 @@
     analytics: false,
     scrollRestoration: false
   })
+  
+  window.addEventListener('DOMContentLoaded', () => {
+          lazyLoadInstance.update()
+      
+          preloader.endLoading() 
+       
+  })
+  document.addEventListener('pjax:send', () => {
+     
+      preloader.initLoading() 
+    
+  })
+  document.addEventListener('pjax:complete', () => { 
+          preloader.endLoading()
+              preloader.removePaceDone()
+       
+      
+          lazyLoadInstance.update()
+       
+  })
 
   document.addEventListener('pjax:error', (e) => {
     if (e.request.status === 404) {
@@ -536,8 +520,9 @@
     }
   })
 </script>
-    
-</div>
+
+    <script type="text/javascript" src="/lib/zone.js"></script>
+
     </body>
 </html>
 <script>const posts=["posts/16107.html"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>

@@ -36,7 +36,12 @@
 
 
 
-<script>var GOBALCONFIG = {"root":"/","runtime":"2022-12-12 00:00:00","lazyload":{"enable":true,"error":"/img/acrylic.png"},"lightbox":true,"randomlinks":false,"lang":{"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"recent":"最近","yesterday":"昨天","berforeyesterday":"前天","daybefore":"天前","runtime":"天"},"sayhello":{"morning":"早上好","noon":"中午好","afternoon":"下午好","night":"晚上好","goodnight":"晚安","iam":"!  我是"}}};</script><script id="site-config">var PAGECONFIG = {"is_home":false,"is_post":true,"is_page":false,"comment":true,"page":false,"toc":false};</script>
+<div class="site-config">
+    <script>
+        var GOBALPAGE = "post"
+    </script> 
+</div>
+
     <meta name="generator" content="Hexo 6.3.0"></head>
     <body id="body">
         
@@ -58,9 +63,6 @@
             document.getElementById('body').classList = 'pace-done'
         }
     }
-    window.addEventListener('load',()=> { preloader.endLoading() })
-    document.addEventListener('pjax:send', () => { preloader.initLoading() })
-    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
 </script>
         
         <div id="console" style="zoom: 1;" class="">
@@ -132,7 +134,7 @@
                 <ul class="menus_item_child">
                     
                         <li>
-                            <a class="site-page child" href="/says/">
+                            <a class="site-page child" href="/zone/">
                                 <i class="fas fa-cloud-rain"></i>
                                 <span> 动态</span>
                             </a>
@@ -148,7 +150,7 @@
                         <li>
                             <a class="site-page child" href="/links/">
                                 <i class="fas fa-link"></i>
-                                <span> 友链</span>
+                                <span> 收藏</span>
                             </a>
                         </li>
                     
@@ -234,7 +236,7 @@
                 <ul class="menus_item_child">
                     
                         <li>
-                            <a class="site-page child" href="/says/">
+                            <a class="site-page child" href="/zone/">
                                 <i class="fas fa-cloud-rain"></i>
                                 <span> 动态</span>
                             </a>
@@ -250,7 +252,7 @@
                         <li>
                             <a class="site-page child" href="/links/">
                                 <i class="fas fa-link"></i>
-                                <span> 友链</span>
+                                <span> 收藏</span>
                             </a>
                         </li>
                     
@@ -304,7 +306,7 @@
         </div>
     </div>
 </nav>
-  
+ 
 </header>
                 <main class="layout" id="content-inner">
     <div id="post">
@@ -468,27 +470,20 @@
     
         <div id="post-comment">
     <div class="comment-head">
-        <div class="comment-headline">
-            <i class="fas fa-message fa-fw"></i>
-            <span> 评论</span>
-        </div>
+        <div class="comment-headline"><i class="fas fa-message fa-fw"></i><span> 评论</span></div>
+        <!-- <div class="comment-privacy"><a href="/privacy/" data-pjax-state="">隐私政策</a></div> -->
+        <!-- <div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div> -->
     </div>
     <div class="comment-wrap">
-        <div id="comment"></div>
+        <div id="tcomment"></div>
         <script>
-    function initComment(){
-        var options = Object.assign(
-            {"envId":"https://www.guzx.tk","path":"window.location.pathname"},
-            {
-                el: '#comment',
-                onCommentLoaded: function() {
-                    GOBALCONFIG.lightbox && acrylic.lightbox('#article-container img, #twikoo .tk-content img:not(.tk-owo-emotion)') 
-                }
+            function initComment(){
+               twikoo.init({
+                envId: 'https://www.guzx.tk',
+                el: '#tcomment',
+             }) 
             }
-        )
-        twikoo.init(options) 
-    }
-</script>
+        </script>
     </div>
 </div>
         
@@ -534,12 +529,41 @@
     <div class="sticky_layout">
         
     <div class="card-widget" id="card-toc">
-    <div class="item-headline">
-        <i class="fas fa-bars"></i>
-        <span>文章目录</span>
+        <div class="item-headline">
+            <i class="fas fa-bars"></i>
+            <span>文章目录</span>
+        </div>
+        <div class="toc-content" id="toc-content">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        </div>
     </div>
-    <div class="toc-content" id="toc-content">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+    <div class="card-widget card-recent-post">
+    <div class="item-headline">
+        <i class="fas fa-list-ol"></i>
+        <span>最近发布</span>
+    </div>
+    <div class="aside-list">
+        
+        
+            <div class="aside-list-item">
+                <a class="thumbnail" href="/posts/16107.html" title="Hello World">
+                    <img
+                        alt="Hello World"
+                        src="https://cdn.xiaogu.tk/wallhaven-9dmwdx_1600x900.webp">
+                </a>
+                <div class="content">
+                    
+                        <a class="article-recent_post_categories" href="/posts/16107.html">
+                            hexo
+                        </a>
+                    
+                    <a class="title" href="/posts/16107.html" title="Hello World">
+                        Hello World
+                    </a>
+                </div>
+            </div>
+                
+        
     </div>
 </div>
 
@@ -646,10 +670,9 @@
                 </footer>
             </div>
            
-        <div>
-    <script type="text/javascript" src="/js/utils.js"></script>
-    <script type="text/javascript" src="/js/main.js"></script>
-    
+        <script type="text/javascript" src="/js/utils.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
 
 <script src="/lib/pjax.min.js"></script>
 
@@ -657,14 +680,25 @@
     
 <script src="/lib/lazyload.min.js"></script>
 
+    <script>
+    window.lazyLoadInstance = new LazyLoad({
+        elements_selector: 'img',
+        threshold: 0,
+        data_src: 'lazy-src',
+        callback_error: (img) => {
+            img.setAttribute("src", "/img/acrylic.png");
+        }
+    })
+</script>
 
 
 <script src="/lib/snackbar.min.js"></script>
 
 
-    
 <script src="/lib/view-image.min.js"></script>
 
+
+<script src="/lib/waterfall.min.js"></script>
 
 
     
@@ -675,17 +709,12 @@
 
 
 
-<div id="js-pjax">
-     
-</div>
-
-    <script>
+<script>
   let pjaxSelectors = [
     'title',
     '#body-wrap',
-    '#site-config',
-    'meta[name="description"]',
-    '#js-pjax'
+    '.site-config',
+    'meta[name="description"]'
   ]
   
   const pjax = new Pjax({
@@ -695,6 +724,26 @@
     analytics: false,
     scrollRestoration: false
   })
+  
+  window.addEventListener('DOMContentLoaded', () => {
+          lazyLoadInstance.update()
+      
+          preloader.endLoading() 
+       
+  })
+  document.addEventListener('pjax:send', () => {
+     
+      preloader.initLoading() 
+    
+  })
+  document.addEventListener('pjax:complete', () => { 
+          preloader.endLoading()
+              preloader.removePaceDone()
+       
+      
+          lazyLoadInstance.update()
+       
+  })
 
   document.addEventListener('pjax:error', (e) => {
     if (e.request.status === 404) {
@@ -702,8 +751,9 @@
     }
   })
 </script>
-    
-</div>
+
+    <script type="text/javascript" src="/lib/zone.js"></script>
+
     </body>
 </html>
 <script>const posts=["posts/16107.html"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>
