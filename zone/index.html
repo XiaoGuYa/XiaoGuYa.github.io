@@ -528,7 +528,7 @@
         data.data.forEach(item => { items.push(Format(item)) });
         if (items.length == 30) document.querySelector('.limit').style.display = 'block';
         items.forEach(item => {
-            html += `<div class="talk_item"><div class="talk_meta"><img class="no-lightbox avatar" src= "/img/acrylic.png" data-lazy-src="https://q1.qlogo.cn/g?b=qq&nk=990320751&s=5"><div class="info"><span class="talk_nick">Leonus${icon}</span><span class="talk_date">${item.date}</span></div></div><div class="talk_content">${item.content}</div><div class="talk_bottom"><div><span class="talk_tag"># ${item.tag}</span></div><a href="javascript:;"onclick="goComment('${item.text}')"><span class="icon"><i class="fa-solid fa-message fa-fw"></i></span></a></div></div>` // 注意修改头像链接和名称
+            html += `<div class="talk_item"><div class="talk_meta"><img class="no-lightbox avatar nolazyload" src="https://q1.qlogo.cn/g?b=qq&nk=17870897&s=5"><div class="info"><span class="talk_nick">XiaoGu${icon}</span><span class="talk_date">${item.date}</span></div></div><div class="talk_content">${item.content}</div><div class="talk_bottom"><div><span class="talk_tag"># ${item.tag}</span></div><a href="javascript:;"onclick="goComment('${item.text}')"><span class="icon"><i class="fa-solid fa-message fa-fw"></i></span></a></div></div>` // 注意修改头像链接和名称
         })
         document.getElementById('talk').innerHTML = html
     })
@@ -551,7 +551,7 @@ function goComment(e) {
         content = text.replace(/\[(.*?)\]\((.*?)\)/g, `<a href="$2">@$1</a>`);
         if (imgls) {
             content += `<div class="zone_imgbox">`
-            imgls.map(item => { return item.replace(/!\[.*\]\((.*?)\)/, '$1') }).forEach(e => content += `<a href="${e}" data-fancybox="gallery" class="fancybox" data-thumb="${e}"><img class="nolazyload" src= "/img/acrylic.png" data-lazy-src="${e}"></a>` // 2023-02-06更新
+            imgls.map(item => { return item.replace(/!\[.*\]\((.*?)\)/, '$1') }).forEach(e => content += `<a href="${e}" data-fancybox="gallery" class="fancybox" data-thumb="${e}"><img class="nolazyload" src="${e}"></a>` // 2023-02-06更新
             )
             content += '</div>'
         }
