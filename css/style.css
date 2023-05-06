@@ -3586,6 +3586,14 @@ button{
 .normal.dark{
     background-color: #191919;
     color: #aaa;
+    --hl-color: rgba(255,255,255,0.7);
+    --hl-bg: #171717;
+    --hltools-bg: #1a1a1a;
+    --hltools-color: #90a4ae;
+    --hlnumber-bg: #171717;
+    --hlnumber-color: rgba(255,255,255,0.4);
+    --hlscrollbar-bg: #1f1f1f;
+    --hlexpand-bg: linear-gradient(180deg, rgba(23,23,23,0.6), rgba(23,23,23,0.9));
 }
 .normal.dark.match .match_bg,.dark .post_comments,.dark .public,.dark .album_list,.normal.dark #headers{
     background-color: #212121;
