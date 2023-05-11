@@ -16,10 +16,10 @@
 <meta property="og:description" content="&#x2F;* 页面初始化 *&#x2F; div#page {     background: none;     border: 0;     padding: 0; } [data-theme&#x3D;dark] #twikoo .tk-content, #twikoo .tk-content {     padding: 0;     background: transparent; } .talk_item, .">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.xiaogu.tk/img/loading.gif">
-<meta property="og:image" content="https://q1.qlogo.cn/g?b=qq&nk=17870897&s=5">
+<meta property="og:image" content="https://www.helloimg.com/images/2023/04/25/oeQpaq.jpg">
 <meta property="og:image" content="http://www.xiaogu.tk/zone/$%7Be%7D">
 <meta property="article:published_time" content="2020-07-22T14:06:17.000Z">
-<meta property="article:modified_time" content="2023-05-11T08:39:54.410Z">
+<meta property="article:modified_time" content="2023-05-11T11:53:49.428Z">
 <meta property="article:author" content="XiaoGu">
 <meta property="article:tag" content="xiaoguya">
 <meta name="twitter:card" content="summary">
@@ -304,7 +304,7 @@ function pageTalk() {
         data.data.forEach(item => { items.push(Format(item)) });
         if (items.length == 30) document.querySelector('.limit').style.display = 'block';
         items.forEach(item => {
-            html += `<div class="talk_item"><div class="talk_meta"><img class="no-lightbox no-lazyload avatar" src="https://q1.qlogo.cn/g?b=qq&nk=17870897&s=5"><div class="info"><span class="talk_nick">XiaoGu${icon}</span><span class="talk_date">${item.date}</span></div></div><div class="talk_content">${item.content}</div></div>` // 注意修改头像链接和名称
+            html += `<div class="talk_item"><div class="talk_meta"><img class="no-lightbox no-lazyload avatar" src="https://www.helloimg.com/images/2023/04/25/oeQpaq.jpg"><div class="info"><span class="talk_nick">XiaoGu${icon}</span><span class="talk_date">${item.date}</span></div></div><div class="talk_content">${item.content}</div></div>` // 注意修改头像链接和名称
         })
         document.getElementById('talk').innerHTML = html
     })
