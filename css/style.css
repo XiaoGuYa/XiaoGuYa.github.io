@@ -113,7 +113,7 @@ em, i {
     color: #FFF;
 }
 #header .header_bg_filter .header_info_qm{
-    color: #7a8b9a;
+    color: #ffffff;
 }
 #header .webname_show {
 	text-shadow:0 0 5px #888;
@@ -3266,7 +3266,7 @@ button{
     border-bottom:0 ;
 }
 .obje .index_card{
-    border: 2px solid #fff;
+    border: 2px solid #e1e1e1;
     background: linear-gradient(180deg,#f5f7f9 0,#fff);
     box-shadow: 8px 8px 20px 0 rgb(55 99 170 / 10%), -8px -8px 20px 0 #fff, inset 0 4px 20px 0 hsl(0deg 0% 100% / 50%);
 }
