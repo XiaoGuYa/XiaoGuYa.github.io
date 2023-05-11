@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html class=" ">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
@@ -28,7 +28,8 @@
                   href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.css" />
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"
                   media="all" onload="this.media='all'">
-                <script type="text/javascript" src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js"></script>
+                <link rel="stylesheet" type="text/css" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/nprogress/0.2.0/nprogress.min.css">
+                <script type="text/javascript" src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.5.1/jquery.min.js"></script>
                 <script src="https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.16/twikoo.all.min.js"></script>
 
 
@@ -44,16 +45,12 @@
                     }
                   };
                   </script>
-                <style>
-                  @font-face {
-                    font-family: 'hm';
-                    src: url('/fonts/hm.woff2')format("truetype");
-                  }
-                </style>
+
 <meta name="generator" content="Hexo 6.3.0"></head>
 
   <body class="obje match">
     <div class="content">
+
       <header id="header" class="match_bg"> 
   <div class="header_bg">
     <div class="header_bg_img">
@@ -96,17 +93,16 @@
   </div>
   <script>
     Config = {
-        homeUrl: 'http://www.xiaogu.tk',
-        themeUrl: 'http://www.xiaogu.tk/themes/Pigeon',
-        cdnUrl: 'http://www.xiaogu.tk/themes/Pigeon',
-        Pjax: 'ture',
+        homeUrl: 'http://www.xiaogu.tk', 
+        Pjax: 'ture', 
+        ajax_url:'http://www.xiaogu.tk', 
     };
 </script>  
         <div class="content_top pigeon_ajax" id="body-wrap">
   
 
   
-      <div class="index_list index_card match_bg" >
+      <article class="index_list index_card match_bg" >
       <h2 class="index_list_name"><a href="/posts/3580.html" >告辞了，济南！</a></h2>
       <div class="index_list_excerpt"> 告辞从2018来到济南，是时候说再见了！​2018年年初，跟随舅舅来到济南，从事一个从未了解过的行业。刚开始的两年一直在混日子，也没心思去学这个，第三年感觉不行了，不学真的不行了。认真学习了两年后，也自己开始独立管理一部分区域。但是随着时间的推移，越来越感觉自己真的不喜欢这个行业，虽然家里人都说这个行业轻松，以后发展前景还不错，但是自己是真的不喜欢。今年下定决心，要离开这个行业。去从事一个自...</div>
       <div class="index_list_foot">
@@ -123,12 +119,12 @@
           
         </div>
       </div>
-    </div>
+    </article>
    
     
 
   
-      <div class="index_list index_card match_bg" >
+      <article class="index_list index_card match_bg" >
       <h2 class="index_list_name"><a href="/posts/16107.html" >Hello World</a></h2>
       <div class="index_list_excerpt"> Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.Qui...</div>
       <div class="index_list_foot">
@@ -145,7 +141,7 @@
           
         </div>
       </div>
-    </div>
+    </article>
    
     
 </div>
@@ -171,11 +167,14 @@
   <div class="tools_night"><a href="javascript:switchNightMode()"><i class="iconfont icon-taiyang"></i></a></div>
 <div class="tools_top" id="top_to" ><i class="iconfont icon-top1"></i></div>
 </div>
+        <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+        <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/nprogress/0.2.0/nprogress.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.lazyload.min.js"></script>
         <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-
         <script src="https://npm.elemecdn.com/busuanzi@2.3/bsz.pure.mini.js"></script>
-        <script type="text/javascript">
-          $(document).on('pjax:complete', function () { if (typeof Prism !== 'undefined') { var pres = document.getElementsByTagName('pre'); for (var i = 0; i < pres.length; i++) { if (pres[i].getElementsByTagName('code').length > 0) pres[i].className = 'line-numbers'; } Prism.highlightAll(true, null); } }); function switchNightMode() { var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0"; if (night == "0") { document.body.classList.add("dark"); document.cookie = "night=1;path=/"; console.log("夜间模式开启") } else { document.body.classList.remove("dark"); document.cookie = "night=0;path=/"; console.log("夜间模式关闭") } } (function () { if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === "") { if (new Date().getHours() > 22 || new Date().getHours() < 5) { document.body.classList.add("dark"); document.cookie = "night=1;path=/"; console.log("夜间模式开启") } else { document.body.classList.remove("dark"); document.cookie = "night=0;path=/"; console.log("夜间模式关闭") } } else { var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0"; if (night == "0") { document.body.classList.remove("dark") } else { if (night == "1") { document.body.classList.add("dark") } } } })(); 
+      </div>
+      </div>
+      <script type="text/javascript">$(document).on('pjax:complete', function () { if (typeof Prism !== 'undefined') { var pres = document.getElementsByTagName('pre'); for (var i = 0; i < pres.length; i++) { if (pres[i].getElementsByTagName('code').length > 0) pres[i].className = 'line-numbers'; } Prism.highlightAll(true, null); } }); function switchNightMode() { var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0"; if (night == "0") { document.body.classList.add("dark"); document.cookie = "night=1;path=/"; console.log("夜间模式开启") } else { document.body.classList.remove("dark"); document.cookie = "night=0;path=/"; console.log("夜间模式关闭") } } (function () { if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === "") { if (new Date().getHours() > 22 || new Date().getHours() < 5) { document.body.classList.add("dark"); document.cookie = "night=1;path=/"; console.log("夜间模式开启") } else { document.body.classList.remove("dark"); document.cookie = "night=0;path=/"; console.log("夜间模式关闭") } } else { var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0"; if (night == "0") { document.body.classList.remove("dark") } else { if (night == "1") { document.body.classList.add("dark") } } } })(); 
         </script>
   </body>
 

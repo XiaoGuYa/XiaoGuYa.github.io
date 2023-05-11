@@ -1266,7 +1266,7 @@ to {
     inline;
 }
 .song h1,.song h2,.song h3,.song h4,.song h5,.song h6{
-    color:#666;
+    color:var(--h-color);
     line-height:1.4;
     font-weight:700;
     margin:30px 0 10px 0;
@@ -3588,6 +3588,7 @@ button{
     color: #aaa;
     --hl-color: rgba(255,255,255,0.7);
     --hl-bg: #171717;
+    --h-color: #e7e7e7;
     --hltools-bg: #1a1a1a;
     --hltools-color: #90a4ae;
     --hlnumber-bg: #171717;
@@ -3748,6 +3749,7 @@ button{
     color: #fff;
 	--hl-color: rgba(255,255,255,0.7);
     --hl-bg: #171717;
+    --h-color: #fff;
     --hltools-bg: #1a1a1a;
     --hltools-color: #90a4ae;
     --hlnumber-bg: #171717;
@@ -3858,6 +3860,7 @@ button{
 :root {
     --hl-color: #90a4ae;
     --hl-bg: #f6f8fa;
+    --h-color: #666;
     --hltools-bg: #e6ebf1;
     --hltools-color: #90a4ae;
     --hlnumber-bg: #f6f8fa;

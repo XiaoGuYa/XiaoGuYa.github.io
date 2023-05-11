@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html class=" ">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://q1.qlogo.cn/g?b=qq&nk=17870897&s=5">
 <meta property="og:image" content="http://www.xiaogu.tk/zone/$%7Be%7D">
 <meta property="article:published_time" content="2020-07-22T14:06:17.000Z">
-<meta property="article:modified_time" content="2023-05-11T01:29:23.154Z">
+<meta property="article:modified_time" content="2023-05-11T08:39:54.410Z">
 <meta property="article:author" content="XiaoGu">
 <meta property="article:tag" content="xiaoguya">
 <meta name="twitter:card" content="summary">
@@ -38,7 +38,8 @@
                   href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.css" />
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"
                   media="all" onload="this.media='all'">
-                <script type="text/javascript" src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js"></script>
+                <link rel="stylesheet" type="text/css" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/nprogress/0.2.0/nprogress.min.css">
+                <script type="text/javascript" src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.5.1/jquery.min.js"></script>
                 <script src="https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.16/twikoo.all.min.js"></script>
 
 
@@ -54,16 +55,12 @@
                     }
                   };
                   </script>
-                <style>
-                  @font-face {
-                    font-family: 'hm';
-                    src: url('/fonts/hm.woff2')format("truetype");
-                  }
-                </style>
+
 <meta name="generator" content="Hexo 6.3.0"></head>
 
   <body class="obje match">
     <div class="content">
+
       <header id="header" class="match_bg"> 
   <div class="header_bg">
     <div class="header_bg_img">
@@ -106,10 +103,9 @@
   </div>
   <script>
     Config = {
-        homeUrl: 'http://www.xiaogu.tk',
-        themeUrl: 'http://www.xiaogu.tk/themes/Pigeon',
-        cdnUrl: 'http://www.xiaogu.tk/themes/Pigeon',
-        Pjax: 'ture',
+        homeUrl: 'http://www.xiaogu.tk', 
+        Pjax: 'ture', 
+        ajax_url:'http://www.xiaogu.tk', 
     };
 </script>  
                 
@@ -360,21 +356,6 @@ function getTime(time) {
 
              
 
-        
-            <div class="post_comments">
-    <div class="line">
-      <div class="line_name">评论</div>
-    </div>
-    <div id="tcomment"></div>
-    <script>
-      twikoo.init({
-        envId: 'https://www.guzx.tk', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
-        el: '#tcomment', // 容器元素
-        // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
-        // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
-        // lang: 'zh-CN', // 用于手动设定评论区语言，支持的语言列表 https://github.com/imaegoo/twikoo/blob/main/src/client/utils/i18n/index.js
-      })
-    </script>
          
           
 
@@ -398,11 +379,14 @@ function getTime(time) {
   <div class="tools_night"><a href="javascript:switchNightMode()"><i class="iconfont icon-taiyang"></i></a></div>
 <div class="tools_top" id="top_to" ><i class="iconfont icon-top1"></i></div>
 </div>
+        <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+        <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/nprogress/0.2.0/nprogress.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.lazyload.min.js"></script>
         <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-
         <script src="https://npm.elemecdn.com/busuanzi@2.3/bsz.pure.mini.js"></script>
-        <script type="text/javascript">
-          $(document).on('pjax:complete', function () { if (typeof Prism !== 'undefined') { var pres = document.getElementsByTagName('pre'); for (var i = 0; i < pres.length; i++) { if (pres[i].getElementsByTagName('code').length > 0) pres[i].className = 'line-numbers'; } Prism.highlightAll(true, null); } }); function switchNightMode() { var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0"; if (night == "0") { document.body.classList.add("dark"); document.cookie = "night=1;path=/"; console.log("夜间模式开启") } else { document.body.classList.remove("dark"); document.cookie = "night=0;path=/"; console.log("夜间模式关闭") } } (function () { if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === "") { if (new Date().getHours() > 22 || new Date().getHours() < 5) { document.body.classList.add("dark"); document.cookie = "night=1;path=/"; console.log("夜间模式开启") } else { document.body.classList.remove("dark"); document.cookie = "night=0;path=/"; console.log("夜间模式关闭") } } else { var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0"; if (night == "0") { document.body.classList.remove("dark") } else { if (night == "1") { document.body.classList.add("dark") } } } })(); 
+      </div>
+      </div>
+      <script type="text/javascript">$(document).on('pjax:complete', function () { if (typeof Prism !== 'undefined') { var pres = document.getElementsByTagName('pre'); for (var i = 0; i < pres.length; i++) { if (pres[i].getElementsByTagName('code').length > 0) pres[i].className = 'line-numbers'; } Prism.highlightAll(true, null); } }); function switchNightMode() { var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0"; if (night == "0") { document.body.classList.add("dark"); document.cookie = "night=1;path=/"; console.log("夜间模式开启") } else { document.body.classList.remove("dark"); document.cookie = "night=0;path=/"; console.log("夜间模式关闭") } } (function () { if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === "") { if (new Date().getHours() > 22 || new Date().getHours() < 5) { document.body.classList.add("dark"); document.cookie = "night=1;path=/"; console.log("夜间模式开启") } else { document.body.classList.remove("dark"); document.cookie = "night=0;path=/"; console.log("夜间模式关闭") } } else { var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0"; if (night == "0") { document.body.classList.remove("dark") } else { if (night == "1") { document.body.classList.add("dark") } } } })(); 
         </script>
   </body>
 

@@ -2,6 +2,10 @@ console.log("\n%c Pigeon By 山卜方 %c https://novcu.com ","color:#fff;backgro
 //返回顶部
 $("#top_to").hide();$(window).scroll(function(){if($(this).scrollTop()>200){$("#top_to").fadeIn(100)}else{$("#top_to").fadeOut(200)}});$("#top_to").click(function(){$("body,html").animate({scrollTop:0},400);return false});
 
+//懒加载
+function LanLoad(){
+    new LazyLoad({});
+}
 
 function codeBlockCopy() {
   const e = document.querySelector(".page");
@@ -54,13 +58,26 @@ const utils = {
         return Math.floor(timeDiff / (1000 * 3600 * 24));
       },
     };
+//PjAX配置
+if (Config.Pjax === 'true') {
+    $(document).pjax('a[href^="' + Config.homeUrl + '"]:not(a[target="_blank"], a[no-pjax])', {
+        container: '#pjax',
+        fragment: '#pjax',
+        timeout: 8000
+    })
+    .on('pjax:send', function() { 
+        NProgress.start(); 
+    })
+    .on('pjax:complete', function() {
+        //NProgress
+        NProgress.done();
+       //返回顶部
+       LanLoad();
+       codeBlockCopy();
+       chageTimeFormate();
 
-(function() {
-  codeBlockCopy();
-  chageTimeFormate();
-  
-
-})();
+    });
+};
 function getChildren(el, className) {
   for (let item of el.children) if (item.className === className) return item;
   return null;
