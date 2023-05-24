@@ -156,9 +156,7 @@ em, i {
 #headers .meun_li:last-child{
 	margin-right: 0;
 }
-#headers .level{
-    
-}
+
 #headers .level_ul {
     position: absolute;
     min-width: 5.62rem;
@@ -1818,9 +1816,7 @@ to {
 .song .collapse-title span{
 	display: block !important;
 }
-.song .collapse-ico {
-	
-}
+
 .song .collapse-body {
 	padding:15px;
 	line-height:2em;
@@ -2675,8 +2671,8 @@ pre[class*="language-"]::selection,pre[class*="language-"]::selection,code[class
     font-size: 14px;
     color: #fff;
     background: -webkit-linear-gradient(45deg, #00a0e9, #10d39d, #00a0e9, #10d39d);
-    -moz-linear-gradient(45deg, #00a0e9, #10d39d, #00a0e9, #10d39d);
-    -ms-linear-gradient(45deg, #00a0e9, #10d39d, #00a0e9, #10d39d);
+    -moz-linear-gradient:(45deg, #00a0e9, #10d39d, #00a0e9, #10d39d);
+    -ms-linear-gradient:(45deg, #00a0e9, #10d39d, #00a0e9, #10d39d);
     color: transparent;
     -webkit-background-clip: text;
     animation: ran 20s linear infinite;
