@@ -1,6 +1,6 @@
 !function() {
     var e = document.createElement("style");
-    e.textContent = "\n    .__progress__ {\n        top: 0; \n        left: 0;\n        position: fixed;\n        width: 10%;\n        height: 2px;\n        z-index: 103;\n        background-color: #077ff6;\n        transition: width 0.4s ease 0s;\n    }",
+    e.textContent = "\n    .__progress__ {\n        top: 0; \n        left: 0;\n        position: fixed;\n        width: 10%;\n        height: 2px;\n        z-index: 103;\n        background-color: #77AAAD;\n        transition: width 0.4s ease 0s;\n    }",
     document.head.appendChild(e);
     var t = null;
     document.addEventListener("progress:start", (()=>{

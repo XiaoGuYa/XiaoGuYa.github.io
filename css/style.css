@@ -114,7 +114,7 @@ em, i {
     color: #FFF;
 }
 #header .header_bg_filter .header_info_qm{
-    color: #566064;
+    color: var(--h-color) !important;
 }
 #header .webname_show {
 	text-shadow:0 0 5px #888;
@@ -2051,8 +2051,8 @@ to {
     align-items: center;
     justify-content: space-between;
     font-size: 14px;
-    color: #555;
-    border-bottom:1px solid rgba(222,229,231,.45) ;
+    color: var(--h-color) !important;
+    border-bottom:1px solid rgba(222,229,231,.45);
     padding: 10px 15px;
 }
 .cross-excerpt{
@@ -3187,7 +3187,7 @@ figure.highlight:hover .copy-code {
     font-size: 13px;
     margin: 8px 0;
     padding: 10px;
-    border-left: 4px solid #ff5700a6;
+    border-left: 4px solid var(--dark-green) !important;
     background-color: rgba(220, 220, 220, 0.1);
     list-style: none;
     word-break: break-all;
@@ -3201,7 +3201,7 @@ figure.highlight:hover .copy-code {
 }
 
 .post-copyright a {
-    color: #fe9158;
+    color: var(--dark-green) !important;
     text-decoration: underline;
     transition: color .1s;
 }

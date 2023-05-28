@@ -16,13 +16,15 @@
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-12-24T11:21:17.000Z">
-<meta property="article:modified_time" content="2023-05-28T11:40:15.369Z">
+<meta property="article:modified_time" content="2023-05-28T13:12:46.565Z">
 <meta property="article:author" content="XiaoGu">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Hexos">
 <meta property="article:tag" content="Hexosss">
 <meta name="twitter:card" content="summary">
         
+          <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/tocbot/4.12.2/tocbot.min.js"></script>
+          <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/sticky-sidebar/3.3.1/sticky-sidebar.min.js"></script>
           <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.css" />
             
               
@@ -80,17 +82,42 @@
   <div class="navbar">
           <div class="meun_list">
             <ul class="meun_ul">
-                
-                  <li class="meun_li"><a href="/">首页</a></li>
-                  
-                  <li class="meun_li"><a href="/categories/">分类</a></li>
-                  
-                  <li class="meun_li"><a href="/archives/">归档</a></li>
-                  
-                  <li class="meun_li"><a href="/zone/">动态</a></li>
-                  
-                  <li class="meun_li"><a href="/about/">关于</a></li>
-                  
+              
+                    
+                      <li class="meun_li">
+                        <a href="/">首页</a>
+                      </li>
+                      
+            
+                    
+                      <li class="meun_li level">
+                      <a href="javascript:;">文库</a>
+                        <ul class="level_ul">
+                          
+                            <li class="level_li">
+                              <a href="/archives/">归档</a>
+                            </li>  
+                          
+                            <li class="level_li">
+                              <a href="/categories/">分类</a>
+                            </li>  
+                           
+                      </ul>
+                    </li>
+                      
+            
+                    
+                      <li class="meun_li">
+                        <a href="/zone/">动态</a>
+                      </li>
+                      
+            
+                    
+                      <li class="meun_li">
+                        <a href="/about/">关于</a>
+                      </li>
+                      
+            
                 </ul>
           </div>
           
@@ -143,7 +170,7 @@
     </div>
     <div id="toc_container">
       <div class="toc_container">
-        <div class="inner-wrapper-sticky" tabindex="-1">
+        <div class="inner-wrapper-sticky" >
           <div id="TOC-text" class="TOC-text toc">
             <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
           </div>
@@ -200,7 +227,8 @@
 
 <div class="post-copyright" style="margin-left:20px"> 
     <li class="post-copyright-author">
-      <strong>本文作者：</strong>XiaoGu
+      <strong>本文作者：</strong>
+      XiaoGu
     </li> 
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
@@ -304,6 +332,7 @@
       }
     }
   })()</script>
+<script> if ($('.toc').length > 0) { var headerEl = 'h1,h2,h3,h4', content = '.song', idArr = {}; $(content).children(headerEl).each(function () { var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, ''); headerId = headerId.toLowerCase(); if (idArr[headerId]) { $(this).attr('id', headerId + '-' + idArr[headerId]); idArr[headerId]++; } else { idArr[headerId] = 1; $(this).attr('id', headerId); } }); tocbot.init({ tocSelector: '.toc', contentSelector: content, headingSelector: headerEl, scrollSmooth: true, scrollSmoothOffset: 0, headingsOffset: 0 }); }; var sidebar = new StickySidebar('.toc_container', { topSpacing: 30, containerSelector: '.post', innerWrapperSelector: '.toc_container' }); </script>
           
 
     </div>
