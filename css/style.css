@@ -3260,3 +3260,17 @@ figure.highlight:hover .copy-code {
         font-size: 14px;
     }
 }
+#comments{
+    margin-top: 1rem;
+}
+
+#comments .loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#comments .loading img {
+    width: 200px;
+}

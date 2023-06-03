@@ -16,7 +16,7 @@
 <meta property="og:description" content="记录生活">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-22T14:06:17.000Z">
-<meta property="article:modified_time" content="2023-05-28T13:12:46.565Z">
+<meta property="article:modified_time" content="2023-06-03T07:45:34.237Z">
 <meta property="article:author" content="XiaoGu">
 <meta property="article:tag" content="xiaoguya">
 <meta name="twitter:card" content="summary">
@@ -134,16 +134,28 @@
     <article class="public">       
     <div  class="gen">           
         <div class="comments_lie">
+            
             <ol class="comment-list" id="comments">  
-                
+                <div class='loading'><img src="/img/loading.gif" alt="加载中..."></div>
             </ol>                        
-
+            <div class="limit">- 只展示最近30条说说 -</div
         </div>
         </div>
         </article>
         </div>
 
     <script>
+    // 适配pjax
+function whenDOMReady() {
+    if (location.pathname == '/zoner/') pageTalk();
+}
+whenDOMReady()
+document.addEventListener("pjax:complete", whenDOMReady)
+
+// 自适应
+window.onresize = () => {
+    if (location.pathname == '/zone/') waterfall('.comments');
+};    
     pageTalk();
     // 页面说说
     function pageTalk() {
@@ -154,7 +166,8 @@
             data.data.forEach(item => { items.push(Format(item)) });
             if (items.length == 30) document.querySelector('.limit').style.display = 'block';
             items.forEach(item => {
-                html += `        <li id="limit" class="comment comment-body cross-body comment-parent comment_ajax comment-odd comment-by-author">
+                html += `        
+                <li id="limit" class="comment comment-body cross-body comment-parent comment_ajax comment-odd comment-by-author">
             <div id="comment-88">
                 <div class="cross-box">
                 <div class="cross_left">
